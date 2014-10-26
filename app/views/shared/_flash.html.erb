@@ -1,0 +1,13 @@
+<div id="flash-wrapper">
+  <% if flash[:success] %>
+    <div id="success" class="alert alert-success">
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+  
+  <% if flash[:error] %>
+    <div id="error" class="alert alert-danger">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
+</div>
