@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'annotate'
 gem 'autoprefixer-rails'
+gem 'rspec-rails'
 
 group :development do
   gem 'better_errors'
