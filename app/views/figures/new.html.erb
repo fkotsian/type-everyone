@@ -1,0 +1,16 @@
+<h1>Add Your Favorites</h1>
+
+<%= form_for @figure, html: {} do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name, class: 'form-control' %><br>
+  <%= f.label "What type of figure is this?" %>
+<% end %>
+
+<br><br>
+
+<%= form_for @figure_image, html: {} do |f| %>
+  <%= f.label "Where is your image?" %>
+  <%= f.text_field :url,  class: 'form-control' %>
+  <%= f.label "How big is the image?" %>
+  <%= f.text_field :size, class: 'form-control' %>
+<% end %>
