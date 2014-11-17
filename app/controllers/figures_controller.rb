@@ -23,10 +23,6 @@ class FiguresController < ApplicationController
   
   private
   def figure_params
-    params.require(:figure).permit(:name, :figure_category_id)
-  end
-  
-  def figure_image_params
-    params.require(:figure_image).permit(:url, :size, :figure_id)
+    params.require(:figure).permit(:name, :figure_image_id, :figure_category_id)
   end
 end
