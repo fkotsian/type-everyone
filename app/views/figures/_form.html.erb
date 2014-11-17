@@ -1,0 +1,12 @@
+<%= form_for @figure do %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+    <%= f.fields_for :figure_images do |builder| %>
+      <%= render "figure_images/figure_image_fields", :f => builder %>
+    <% end %>
+    <p>
+      <%= f.submit "Submit" %>
+    </p>
+<% end %>

@@ -1,1 +1,1 @@
-figure_categories = %w[Musician Artist Actor Scientist VC Businessperson] + ['Public Figure']
+figure_categories = %w[Celebrities Sports Scientists] + ['Historical Figures', 'Movie and TV Characters']
