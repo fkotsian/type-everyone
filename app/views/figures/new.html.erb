@@ -1,16 +1,28 @@
-<h1>Add Your Favorites</h1>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6 text-center">
+    <h1>Add Your Favorites</h1>
+  </div>
+</div>
 
-<%= form_for @figure, html: {} do |f| %>
-  <%= f.label "Name" %>
-  <%= f.text_field :name, class: 'form-control' %><br>
-  <%= f.label "What type of figure is this?" %>
-<% end %>
+<br>
 
-<br><br>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <%= form_for @figure, html: {} do |f| %>
+      <%= f.label "Who is this?" %>
+      <%= f.text_field :name, class: 'form-control' %><br>
+      <%= f.label "What category do they fall under?" %>
+      <p>Figure Categories</p>
 
-<%= form_for @figure_image, html: {} do |f| %>
-  <%= f.label "Where is your image?" %>
-  <%= f.text_field :url,  class: 'form-control' %>
-  <%= f.label "How big is the image?" %>
-  <%= f.text_field :size, class: 'form-control' %>
-<% end %>
+      <%= fields_for :figure_image do |f| %>
+        <%= f.label "Where is your image? (URL)" %>
+        <%= f.text_field :url,  class: 'form-control' %><br>
+        <%= f.label "How big is the image?" %>
+        <%= f.text_field :size, class: 'form-control' %>
+      <% end %>
+  
+      <br>
+      <%= f.submit "Submit Your Figure", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
