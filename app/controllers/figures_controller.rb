@@ -4,7 +4,8 @@ class FiguresController < ApplicationController
   end
   
   def custom(figure_type)
-    @figures = Figure.where(type: figure_type)
+    @category = figure_type
+    @figures = Figure.where(figure_category: @category)
     render :index
   end
 
