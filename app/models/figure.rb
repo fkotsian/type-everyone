@@ -3,5 +3,5 @@ class Figure < ActiveRecord::Base
   belongs_to :figure_category
   has_many :images, class_name: :figure_image, dependent: :destroy
   
-  accepts_nested_attributes_for :figure_images, :allow_destroy => true
+  accepts_nested_attributes_for :images, :allow_destroy => true
 end
