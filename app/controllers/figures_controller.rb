@@ -1,5 +1,11 @@
 class FiguresController < ApplicationController
   def index
+    @figures = Figure.all
+  end
+  
+  def custom(figure_type)
+    @figures = Figure.where(type: figure_type)
+    render :index
   end
 
   def new
