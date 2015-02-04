@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20141026060806) do
     t.integer  "figure_category_id"
   end
 
-  add_index "figures", ["figure_category_id"], name: "index_figures_on_figure_category_id", unique: true
+  add_index "figures", ["figure_category_id"], name: "index_figures_on_figure_category_id"
   add_index "figures", ["name"], name: "index_figures_on_name", unique: true
 
 end
