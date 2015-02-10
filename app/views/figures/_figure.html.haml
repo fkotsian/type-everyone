@@ -1,5 +1,5 @@
 .figure
   %h1= figure.name
-  <!-- %img.img-responsive{src: figure.image.url, alt: figure.name} -->
+  = image_tag(figure.images.first.url, class: 'img img-responsive', alt: figure.name)
   %br
   %br
