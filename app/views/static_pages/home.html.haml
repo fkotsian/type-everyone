@@ -11,16 +11,16 @@
       = link_to "Celebrities", {controller: 'figures', action: 'custom', category: :celebrities} , {class: 'btn btn-primary btn-lg'}
 
     .col-md-6.text-center
-      %a.btn.btn-primary.btn-lg{href: ''} Historical Figures
+      = link_to "Historical Figures", {controller: 'figures', action: 'custom', category: :historical_figures} , {class: 'btn btn-primary btn-lg'}
 
   %br 
   %br
 
   .row
     .col-md-6.text-center
-      %a.btn.btn-primary.btn-lg{href: ''} Scientists
+      = link_to "Scientists", {controller: 'figures', action: 'custom', category: :scientists} , {class: 'btn btn-primary btn-lg'}
 
     .col-md-6.text-center
-      %a.btn.btn-primary.btn-lg{href: ''} Public Figures
+      = link_to "Public Figures", {controller: 'figures', action: 'custom', category: :public_figures} , {class: 'btn btn-primary btn-lg'}
 
   .row
