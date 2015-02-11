@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026060806) do
+ActiveRecord::Schema.define(version: 20150211210047) do
 
   create_table "figure_categories", force: true do |t|
     t.string   "name",       null: false
@@ -42,5 +42,21 @@ ActiveRecord::Schema.define(version: 20141026060806) do
 
   add_index "figures", ["figure_category_id"], name: "index_figures_on_figure_category_id"
   add_index "figures", ["name"], name: "index_figures_on_name", unique: true
+
+  create_table "vote_types", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "vote_types", ["name"], name: "index_vote_types_on_name", unique: true
+
+  create_table "votes", force: true do |t|
+    t.integer  "vote_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["vote_type_id"], name: "index_votes_on_vote_type_id"
 
 end

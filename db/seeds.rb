@@ -11,6 +11,29 @@ figure_categories = figure_category_list.map do |category_name|
   FigureCategory.create(name: category_name)
 end
 
+vote_type_list = [
+  :isfp,
+  :isfj,
+  :esfp,
+  :esfj,
+  :istp,
+  :istj,
+  :estp,
+  :estj,
+  :infp,
+  :infj,
+  :enfp,
+  :enfj,
+  :intp,
+  :intj,
+  :entp,
+  :entj
+]
+
+vote_types = vote_type_list.map do |type|
+  VoteType.create(name: type)
+end
+
 figure_list = [
   #name, category, image
   ['Benjamin Franklin', 
