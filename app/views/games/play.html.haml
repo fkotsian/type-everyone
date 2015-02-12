@@ -3,7 +3,7 @@
 .row
   .col-md-offset-1.col-md-10
     #play-img-holder
-      = image_tag(FigureImage.first.url, class: 'img img-responsive full-screen center', alt: "Main Img")
+      = image_tag(@figure.images.first.url, class: 'img img-responsive full-screen center', alt: @figure.name)
       
 .row
   .col-md-offset-3.col-md-6

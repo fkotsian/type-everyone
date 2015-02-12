@@ -9,6 +9,9 @@ class GameController < ApplicationController
     if vote_type
       Vote.create(vote_type: vote_type)
     end
-    render 'static_pages/game'
+    
+    rand_id = rand(Figure.count)
+    @figure = Figure.find_by_id rand_id
+    render 'games/play'
   end
 end
