@@ -1,17 +1,13 @@
 class GameController < ApplicationController
-  # def play
-  #   vote if params[:vote_type]
-  #   render 'static_pages#game'
-  # end
-  
   def play
     vote_type = VoteType.find_by name: params[:commit].downcase
-    if vote_type
-      Vote.create(vote_type: vote_type)
+    figure_id = params[:figure]
+    if vote_type && figure_id
+      Vote.create(vote_type: vote_type, figure_id: figure_id)
     end
     
-    rand_id = rand(Figure.count)
-    @figure = Figure.find_by_id rand_id
+    @figure = Figure.random_figure
+    @figure_image = @figure.rand_image_url
     render 'games/play'
   end
 end

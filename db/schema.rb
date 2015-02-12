@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211210047) do
+ActiveRecord::Schema.define(version: 20150212055634) do
 
   create_table "figure_categories", force: true do |t|
     t.string   "name",       null: false
@@ -55,8 +55,10 @@ ActiveRecord::Schema.define(version: 20150211210047) do
     t.integer  "vote_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "figure_id"
   end
 
+  add_index "votes", ["figure_id"], name: "index_votes_on_figure_id"
   add_index "votes", ["vote_type_id"], name: "index_votes_on_vote_type_id"
 
 end
