@@ -1,5 +1,16 @@
 #TypeEverything
 
+- populate w more figures
+- universalize teh size of the img div
+- overlay form on image
+- make a login page to track subscribers/likers
+- set up google analytics
+- let er rip
+
+
+
+
+
 Users can create a unique figure with a photo
 Users can view figures by category
 Categories are displayed at the top of the page

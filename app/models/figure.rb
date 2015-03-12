@@ -6,6 +6,8 @@ class Figure < ActiveRecord::Base
   
   accepts_nested_attributes_for :images, :allow_destroy => true
   
+  attr_reader :name, :affiliation
+  
   def rand_image
     rand_pos = rand(images.count)
     images[rand_pos]
