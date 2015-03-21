@@ -72,7 +72,7 @@ figure_list = [
     'David Heinemeier Hansson',
     :intellectuals,
     {url: 'dhh.jpg'},
-    '37 Signals and Ruby on Rails'
+    'Founder, 37 Signals; Creator, Ruby on Rails'
   ],
   [
     'Curtis Jackson',
@@ -228,10 +228,163 @@ figure_list = [
     {url: 'larry_page.jpg'},
   ],
   [
-    'Sergey Brin',
-    :intellectuals,
-    {url: 'sergey_brin.jpg'},
+    'Common',
+    :musicians,
+    {url: 'common.JPG'},
+    'Truthfully I want to rhyme like Common Sense'
   ],
+  [
+    'Peanut Butter Wolf',
+    :musicians,
+    {url: 'peanut_butter_wolf.jpg'},
+    'aka Chris Manak, Stones Throw Records'
+  ],
+  [
+    'J Dilla',
+    :musicians,
+    {url: 'j_dilla.jpg'},
+  ],
+  [
+    'James Pants',
+    :musicians,
+    {url: 'james_pants.jpg'},
+  ],
+  [
+    "Conan O'Brien",
+    :celebrities,
+    {url: 'conan.jpg'},
+  ],
+  [
+    'Arnold Schwarzenegger',
+    :celebrities,
+    {url: 'arnold.jpg'},
+  ],
+  [
+    'Tyler the Creator',
+    :musicians,
+    {url: 'tyler.jpg'},
+    'Odd Future'
+  ],
+  [
+    'Earl Sweatshirt',
+    :musicians,
+    {url: 'earl_sweatshirt.jpg'},
+    'Odd Future'
+  ],
+  [
+    'Tim Bergling',
+    :musicians,
+    {url: 'avicii.jpg'},
+    'AKA Avicii'
+  ],
+  [
+    'BJ Fogg',
+    :intellectuals,
+    {url: 'bj_fogg.jpg'},
+    'Professor of Persuasive Technology, Stanford University; Founder, behaviormodel.org'
+  ],
+  [
+    'Tim Ferriss',
+    :intellectuals,
+    {url: 'tim_ferriss.jpg'},
+    'Marketer; Author, The Four-Hour Workweek, The Four-Hour Body, The Four-Hour Chef'
+  ],
+  [
+    'Seth Rogen',
+    :celebrities,
+    {url: 'seth_rogen.jpg'},
+    'The Best'
+  ],
+  [
+    'James Franco',
+    :celebrities,
+    {url: 'james_franco.jpg'},
+    'You may remember us from such films as The Interview'
+  ],
+  [
+    'Carl Cox',
+    :musicians,
+    {url: 'carl_cox.jpg'},
+    'British House DJ'
+  ],
+  [
+    'Steve Aoki',
+    :musicians,
+    {url: 'steve_aoki.jpg'},
+  ],
+  [
+    'Benny Benassi',
+    :musicians,
+    {url: 'benny_benassi.jpg'},
+  ],
+  [
+    'Ann Coulter',
+    :intellectuals,
+    {url: 'ann_coulter.jpg'},
+  ],
+  [
+    'Scott Mescudi',
+    :musicians,
+    {url: 'kid_cudi.jpg'},
+    'AKA Kid Cudi'
+  ],
+  [
+    'Paul Rudd',
+    :celebrities,
+    {url: 'paul_rudd.jpg'},
+  ],
+  [
+    'Tom Brady',
+    :athletes,
+    {url: 'tom_brady.jpg'},
+  ],
+  [
+    'Peyton Manning',
+    :athletes,
+    {url: 'peyton_manning.jpg'},
+  ],
+  [
+    'Eli Manning',
+    :athletes,
+    {url: 'eli_manning.jpg'},
+  ],
+  [
+    'Steve Carell',
+    :celebrities,
+    {url: 'steve_carell.jpg'},
+  ],
+  [
+    'Zooey Deschanel',
+    :celebrities,
+    {url: 'zooey_deschanel.jpg'},
+  ],
+  [
+    'Gillian Anderson',
+    :celebrities,
+    {url: 'gillian_anderson.jpg'},
+  ],
+  [
+    'Steven Pinker',
+    :intellectuals,
+    {url: 'steven_pinker.jpg'},
+    'Experimental Psychologist and Social Critic, Harvard University'
+  ],
+  [
+    'Howard Gardner',
+    :intellectuals,
+    {url: 'howard_gardner.jpg'},
+    'Professor of Cognition and Education, Harvard University; Creator of the theory of Multiple Intelligences'
+  ],
+  [
+    'Scarlett Johansson',
+    :celebrities,
+    {url: 'scarlett_johansson.jpg'},
+  ],
+  [
+    'Joseph Gordon Levitt',
+    :celebrities,
+    {url: 'joseph_gordon_levitt.jpg'},
+  ]
 ]
 
 figures = figure_list.map do |name, category, image_attrs, affiliation|
