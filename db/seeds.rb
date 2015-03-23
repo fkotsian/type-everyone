@@ -3,8 +3,7 @@ figure_category_list = [
   :athletes, 
   :intellectuals, 
   :musicians,
-  :public_figures,
-  :historical_figures,
+  :political_figures,
   :fictional_characters
 ]
 
@@ -384,6 +383,106 @@ figure_list = [
     'Joseph Gordon Levitt',
     :celebrities,
     {url: 'joseph_gordon_levitt.jpg'},
+  ],
+  [
+    'James Harden',
+    :athletes,
+    {url: 'james_harden.jpg'},
+    'Currently of the Houston Rockets'
+  ],
+  [
+    'Usher',
+    :musicians,
+    {url: 'usher.jpg'}
+  ],
+  [
+    'Russell Brand',
+    :celebrities,
+    {url: 'russell_brand.jpg'}
+  ],
+  [
+    'Winston Churchill',
+    :political_figures,
+    {url: 'winston_churchill.jpg'},
+    "Tact is the ability to tell someone to go to hell in such a way that they look forward to the trip."
+  ],
+  [
+    'Bill Clinton',
+    :political_figures,
+    {url: 'bill_clinton.jpg'}
+  ],
+  [
+    'Martin Scorcese',
+    :celebrities,
+    {url: 'martin_scorcese.jpg'}
+  ],
+  [
+    'George W. Bush',
+    :political_figures,
+    {url: 'george_w_bush.jpg'}
+  ],
+  [
+    'Hillary Clinton',
+    :political_figures,
+    {url: 'hillary_clinton.jpg'}
+  ],
+  [
+    'Mahatma Mohandas Gandhi',
+    :political_figures,
+    {url: 'gandhi.jpg'}
+  ],
+  [
+    'Che Guevara',
+    :political_figures,
+    {url: 'che_guevara.jpg'}
+  ],
+  [
+    'Malcolm X',
+    :political_figures,
+    {url: 'malcolm_x.jpg'}
+  ],
+  [
+    'Stephen Colbert',
+    :celebrities,
+    {url: 'stephen_colbert.jpg'},
+    'As seen on The Colbert Report'
+  ],
+  [
+    'John Stewart',
+    :celebrities,
+    {url: 'jon_stewart.jpg'},
+    'Of the Daily Show'
+  ],
+  [
+    'Leonardo da Vinci',
+    :intellectuals,
+    {url: 'leonardo_da_vinci.jpg'}
+  ],
+  [
+    'Hunter S. Thompson',
+    :artists_and_writers,
+    {url: 'hunter_s_thompson.jpg'},
+    'Gonzo journalist, author, "Fear and Loathing in Las Vegas"'
+  ],
+  [
+    'Mark Twain',
+    :artists_and_writers,
+    {url: 'mark_twain.jpg'}
+  ],
+  [
+    'Kurt Vonnegut',
+    :artists_and_writers,
+    {url: 'kurt_vonnegut.jpg'}
+  ],
+  [
+    'Salvador Dali',
+    :artists_and_writers,
+    {url: 'dali.jpg'}
+  ],
+  [
+    'Salvador Dali',
+    :artists_and_writers,
+    {url: 'dali.jpg'}
   ]
 ]
 
