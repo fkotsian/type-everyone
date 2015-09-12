@@ -33,9 +33,6 @@ ActiveRecord::Schema.define(version: 20150307234610) do
   add_index "figure_images", ["size"], name: "index_figure_images_on_size"
   add_index "figure_images", ["url"], name: "index_figure_images_on_url", unique: true
 
-# Could not dump table "figures" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "vote_types", force: true do |t|
     t.string   "name",       null: false
     t.datetime "created_at"
