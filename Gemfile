@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.1.1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
@@ -15,7 +14,6 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'annotate'
 gem 'autoprefixer-rails'
-gem 'rspec-rails'
 gem 'haml'
 
 group :development do
@@ -23,3 +21,7 @@ group :development do
   gem 'binding_of_caller'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+end
