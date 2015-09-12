@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   resources :figure_images, only: %w[index new create show]
 
   get '/where', to: 'figures#custom'
-  get '/game',  to: 'game#play'
-  get '/play',  to: 'game#play'
-  post '/play', to: 'game#play'  
+  get '/game',  to: 'game#random'
+  get '/play',  to: 'game#random'
+  get '/random',  to: 'game#random'
+  post '/votes', to: 'votes#create'
   
   root to: 'static_pages#home'
 end
