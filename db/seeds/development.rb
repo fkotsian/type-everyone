@@ -71,7 +71,7 @@ figure_list = [
   [
     'David Heinemeier Hansson',
     :intellectuals,
-    {url: 'dhh.jpg'},
+    {url: 'dhh.png'},
     'Founder, 37 Signals; Creator, Ruby on Rails'
   ],
   [
@@ -384,7 +384,7 @@ figure_list = [
   [
     'Joseph Gordon Levitt',
     :celebrities,
-    {url: 'joseph_gordon_levitt.jpg'},
+    {url: 'joseph_gordon_levitt.png'},
   ],
   [
     'James Harden',
@@ -483,11 +483,10 @@ figure_list = [
   ],
 ]
 
-figures = figure_list.map do |name, category, image_attrs, affiliation|
-  aff = affiliation || nil
+figures = figure_list.map do |name, category, image_attrs, description=""|
   
-  Figure.create(name: name, 
-                affiliation: aff,
+  Figure.create!(name: name, 
+                description: description,
                 figure_category: FigureCategory.find_by(name: category), 
                 images_attributes: [image_attrs])
 end

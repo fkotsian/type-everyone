@@ -40,14 +40,12 @@ figure_list = [
   ['Benjamin Franklin', 
     :historical_figures, 
     {url: 'benjamin_franklin.jpg'}
-  ],
+  ]
 ]
 
-figures = figure_list.map do |name, category, image_attrs, affiliation|
-  aff = affiliation || nil
-  
-  Figure.create(name: name, 
-                affiliation: aff,
+figures = figure_list.map do |name, category, image_attrs, description|
+  Figure.create!(name: name, 
+                description: description,
                 figure_category: FigureCategory.find_by(name: category), 
                 images_attributes: [image_attrs])
 end
