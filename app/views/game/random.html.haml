@@ -1,60 +1,58 @@
-%h1.text-center Game On!
+#play-container{ :style => "background-image: url('#{asset_url @figure_image}');" }
 
-.row
-  .col-md-offset-1.col-md-10
-    #play-figure-holder #{@figure.name}
-    #play-description-holder #{@figure.description}
-    #play-img-holder
-      = image_tag(@figure.rand_image.url, class: 'img img-responsive full-screen center', alt: @figure.name)
+  .row
+    .col-md-12
+      %h1.text-center.white #{@figure.name}
+      %h2.text-center.white #{@figure.description}
       
-.row
-  .col-md-offset-3.col-md-6
-    #play-buttons-holder
-      = form_for(@vote) do |f|
-        = f.hidden_field(:figure_id)
-        .row
-          .col-md-3
-            = f.submit("ISFJ", class: 'btn btn-primary btn-lg', id: 'isfj-btn')
-          .col-md-3
-            = f.submit("ISFP", class: 'btn btn-primary btn-lg', id: 'isfp-btn')
-          .col-md-3
-            = f.submit("ESFJ", class: 'btn btn-primary btn-lg', id: 'esfj-btn')
-          .col-md-3
-            = f.submit("ESFP", class: 'btn btn-primary btn-lg', id: 'esfp-btn')
+      .row
+        .col-md-offset-3.col-md-6
+          #play-buttons-holder
+            = form_for(@vote) do |f|
+              = f.hidden_field(:figure_id)
+              .row
+                .col-md-3
+                  = f.submit("ISFJ", class: 'btn btn-primary btn-lg', id: 'isfj-btn')
+                .col-md-3
+                  = f.submit("ISFP", class: 'btn btn-primary btn-lg', id: 'isfp-btn')
+                .col-md-3
+                  = f.submit("ESFJ", class: 'btn btn-primary btn-lg', id: 'esfj-btn')
+                .col-md-3
+                  = f.submit("ESFP", class: 'btn btn-primary btn-lg', id: 'esfp-btn')
       
-        %br
-        .row
-          .col-md-3
-            = f.submit("ISTJ", class: 'btn btn-primary btn-lg', id: 'istj-btn')
-          .col-md-3
-            = f.submit("ISTP", class: 'btn btn-primary btn-lg', id: 'istp-btn')
-          .col-md-3
-            = f.submit("ESTJ", class: 'btn btn-primary btn-lg', id: 'estj-btn')
-          .col-md-3
-            = f.submit("ESTP", class: 'btn btn-primary btn-lg', id: 'estp-btn')
+              %br
+              .row
+                .col-md-3
+                  = f.submit("ISTJ", class: 'btn btn-primary btn-lg', id: 'istj-btn')
+                .col-md-3
+                  = f.submit("ISTP", class: 'btn btn-primary btn-lg', id: 'istp-btn')
+                .col-md-3
+                  = f.submit("ESTJ", class: 'btn btn-primary btn-lg', id: 'estj-btn')
+                .col-md-3
+                  = f.submit("ESTP", class: 'btn btn-primary btn-lg', id: 'estp-btn')
 
-        %br
-        .row
-          .col-md-3
-            = f.submit("INTJ", class: 'btn btn-primary btn-lg', id: 'intj-btn')
-          .col-md-3
-            = f.submit("INTP", class: 'btn btn-primary btn-lg', id: 'intp-btn')
-          .col-md-3
-            = f.submit("ENTJ", class: 'btn btn-primary btn-lg', id: 'entj-btn')
-          .col-md-3
-            = f.submit("ENTP", class: 'btn btn-primary btn-lg', id: 'entp-btn')
+              %br
+              .row
+                .col-md-3
+                  = f.submit("INTJ", class: 'btn btn-primary btn-lg', id: 'intj-btn')
+                .col-md-3
+                  = f.submit("INTP", class: 'btn btn-primary btn-lg', id: 'intp-btn')
+                .col-md-3
+                  = f.submit("ENTJ", class: 'btn btn-primary btn-lg', id: 'entj-btn')
+                .col-md-3
+                  = f.submit("ENTP", class: 'btn btn-primary btn-lg', id: 'entp-btn')
 
-        %br
-        .row
-          .col-md-3
-            = f.submit("INFJ", class: 'btn btn-primary btn-lg', id: 'infj-btn')
-          .col-md-3
-            = f.submit("INFP", class: 'btn btn-primary btn-lg', id: 'infp-btn')
-          .col-md-3
-            = f.submit("ENFJ", class: 'btn btn-primary btn-lg', id: 'enfj-btn')
-          .col-md-3
-            = f.submit("ENFP", class: 'btn btn-primary btn-lg', id: 'enfp-btn')
+              %br
+              .row
+                .col-md-3
+                  = f.submit("INFJ", class: 'btn btn-primary btn-lg', id: 'infj-btn')
+                .col-md-3
+                  = f.submit("INFP", class: 'btn btn-primary btn-lg', id: 'infp-btn')
+                .col-md-3
+                  = f.submit("ENFJ", class: 'btn btn-primary btn-lg', id: 'enfj-btn')
+                .col-md-3
+                  = f.submit("ENFP", class: 'btn btn-primary btn-lg', id: 'enfp-btn')
 
-.row
-  .col-md-offset-3.col-md-6.text-center
-    = link_to "Next", "/random", class: 'btn btn-lg btn-default'
+      .row
+        .col-md-offset-3.col-md-6.text-center
+          = link_to "Next", "/random", class: 'btn btn-lg btn-default'

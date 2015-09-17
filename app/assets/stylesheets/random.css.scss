@@ -1,0 +1,11 @@
+#play-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  position: absolute;
+  overflow: hidden;
+  top: 0px;  /* Header height */
+  bottom: 0px;  /* Footer height */
+  width: 100%;
+}
