@@ -1,5 +1,5 @@
 class GameController < ApplicationController
-  def random
+  def type
     # vote_type = VoteType.find_by name: params[:commit].downcase
     # figure_id = params[:figure]
     # if vote_type && figure_id
