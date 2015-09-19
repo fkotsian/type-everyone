@@ -39,3 +39,9 @@
       #next-button-holder
         %a{href: '/type', class: 'btn mbti-btn btn-lg', id: 'next-button'} 
           %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
+          
+:javascript
+  BackgroundCheck.init({
+    targets: '.mbti-btn',
+    images: '#play-container'
+  });

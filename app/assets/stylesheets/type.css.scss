@@ -24,14 +24,37 @@
 
 #next-button {
   position: absolute;
-  top: 55%;
+  top: 52%;
   left: 85%;
 }
 
 #next-button-arrow {
 	color: #F2F2F2;
+  font-size: 4em;
 }
 
 #next-btn:hover {
  color: #fff;
+}
+
+/* BackgroundCheck modified styles */
+.ghost-btn.background--light {
+  color: #333;
+  border-color: #333;
+  border-width: 2px;
+}
+
+.ghost-btn.background--light:hover {
+  color: #000;
+}
+
+.ghost-btn.background--dark {}
+.ghost-btn.background--dark:hover {}
+
+.background--light #next-button-arrow {
+  color: #333; 
+}
+
+.background--light:hover #next-button-arrow:hover {
+  color: #000;
 }
