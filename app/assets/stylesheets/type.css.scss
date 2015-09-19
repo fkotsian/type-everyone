@@ -10,6 +10,24 @@
   width: 100%;
 }
 
+#play-buttons-holder {}
+
+#figure-holder {
+}
+
+#figure-name {
+  font: 400 88px 'Roboto Condensed';
+  color: #F2F2F2;
+}
+
+#figure-description {
+  font: 400 48px 'Roboto Condensed';
+  color: #F2F2F2;
+  position: fixed;
+  left: 33%;
+  top: 40%;
+}
+
 .mbti-btn {
   width: 5em;
   height: 3em;
@@ -43,18 +61,41 @@
   border-color: #333;
   border-width: 2px;
 }
-
 .ghost-btn.background--light:hover {
   color: #000;
 }
-
 .ghost-btn.background--dark {}
 .ghost-btn.background--dark:hover {}
 
 .background--light #next-button-arrow {
   color: #333; 
 }
-
 .background--light:hover #next-button-arrow:hover {
   color: #000;
+}
+
+#figure-name.background--light {
+  color: #333;
+}
+#figure-name.background--dark {
+  color: #F2F2F2;
+}
+#figure-name.background--complex {
+  color: #F2F2F2;
+}
+#figure-name.background-light.background--complex {
+  color: #F2F2F2;
+}
+
+#figure-description.background--light {
+  color: #333;
+}
+#figure-description.background--dark {
+  color: #F2F2F2;
+}
+#figure-description.background--dark.background--complex {
+  color: #333;
+}
+#figure-description.background--light.background--complex {
+  color: #F2F2F2;
 }

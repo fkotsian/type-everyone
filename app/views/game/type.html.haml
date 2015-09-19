@@ -2,8 +2,8 @@
 
   .row
     .col-md-12
-      %h1.text-center.white #{@figure.name}
-      %h2.text-center.white #{@figure.description}
+      %h1.text-center#figure-name #{@figure.name.upcase || " "}
+      %h2.text-center#figure-description #{@figure.description || " "}
       
       .row
         .col-md-2
@@ -42,6 +42,6 @@
           
 :javascript
   BackgroundCheck.init({
-    targets: '.mbti-btn',
+    targets: '.mbti-btn, #figure-name, #figure-description',
     images: '#play-container'
   });
