@@ -1,3 +1,38 @@
+#slideout-menu-area {
+  position: fixed;
+  height: 100%;
+  width: 33%;
+  top: 0px;
+  bottom: 0px;
+  
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;  
+}
+
+#slideout-menu {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  
+  left: -100%;
+  top: 0%;
+  bottom: 0%;
+
+  z-index: 1000;
+  
+  background: rgba(80,80,80, 0.9);
+  color: white;
+  
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;  
+}
+
+#slideout-menu-area:hover #slideout-menu {
+  left: 0%;
+}
+
 #play-container {
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,9 +47,18 @@
 
 #play-container-shade {
   background-color: rgba(0,0,0,0.25);
+  z-index: 10;
 }
 
-#play-buttons-holder {}
+#play-buttons-holder {
+  position: relative;
+  height: 100%;
+}
+
+#play-buttons {
+  position: fixed;
+  top: 20%;
+}
 
 #figure-holder {
 }
@@ -36,18 +80,25 @@
   width: 5em;
   height: 3em;
   
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-top: .6em;
+  margin-bottom: .6em;
+  margin-left: .6em;
+  margin-right: .6em;
+  
+  padding: 10px !important;
   
   text-align: center;
 }
 
-#next-button {
-  position: absolute;
-  top: 52%;
+#next-button-area {}
+
+#next-button-holder {
+  position: fixed;
+  top: 43%;
   left: 85%;
+}
+
+#next-button {
 }
 
 #next-button-arrow {
