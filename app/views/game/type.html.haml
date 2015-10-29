@@ -1,44 +1,45 @@
 #play-container{ :style => "background-image: url('#{asset_url @figure_image}');" }
+  #play-container-shade
 
-  .row
-    .col-md-12
-      %h1.text-center#figure-name.highlighted #{@figure.name.upcase || " "}
-      %h2.text-center#figure-description #{@figure.description || " "}
+    .row
+      .col-md-12
+        %h1.text-center#figure-name.highlighted #{@figure.name.upcase || " "}
+        / %h2.text-center#figure-description #{@figure.description || " "}
       
-      .row
-        .col-md-2
-          #play-buttons-holder
-            = form_for(@vote) do |f|
-              = f.hidden_field(:figure_id)
-              .col-md-6
-                .row
-                  = f.submit("ENFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'enfp-btn')   
-                  = f.submit("INTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'intp-btn')
-                .row
-                  = f.submit("ESFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'esfj-btn')           
-                  = f.submit("ISFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'isfp-btn')
-                .row
-                  = f.submit("INFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'infp-btn')    
-                  = f.submit("ENTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'entp-btn')
-                .row
-                  = f.submit("ISFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'isfj-btn')
-                  = f.submit("ESFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'esfp-btn')  
-              .col-md-6
-                .row
-                  = f.submit("ENFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'enfj-btn')
-                  = f.submit("INTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'intj-btn')
-                .row
-                  = f.submit("ESTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'estj-btn')
-                  = f.submit("ISTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'istp-btn')
-                .row
-                  = f.submit("INFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'infj-btn')
-                  = f.submit("ENTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'entj-btn')
-                .row
-                  = f.submit("ISTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'istj-btn')
-                  = f.submit("ESTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'estp-btn')
-      #next-button-holder
-        %a{href: '/type', class: 'btn mbti-btn btn-lg', id: 'next-button'} 
-          %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
+        .row
+          .col-md-2
+            #play-buttons-holder
+              = form_for(@vote) do |f|
+                = f.hidden_field(:figure_id)
+                .col-md-6
+                  .row
+                    = f.submit("ENFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'enfp-btn')   
+                    = f.submit("INTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'intp-btn')
+                  .row
+                    = f.submit("ESFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'esfj-btn')           
+                    = f.submit("ISFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'isfp-btn')
+                  .row
+                    = f.submit("INFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'infp-btn')    
+                    = f.submit("ENTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'entp-btn')
+                  .row
+                    = f.submit("ISFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'isfj-btn')
+                    = f.submit("ESFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'esfp-btn')  
+                .col-md-6
+                  .row
+                    = f.submit("ENFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'enfj-btn')
+                    = f.submit("INTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'intj-btn')
+                  .row
+                    = f.submit("ESTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'estj-btn')
+                    = f.submit("ISTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'istp-btn')
+                  .row
+                    = f.submit("INFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'infj-btn')
+                    = f.submit("ENTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'entj-btn')
+                  .row
+                    = f.submit("ISTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'istj-btn')
+                    = f.submit("ESTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'estp-btn')
+        #next-button-holder
+          %a{href: '/type', class: 'btn mbti-btn btn-lg', id: 'next-button'} 
+            %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
           
 :javascript
   BackgroundCheck.init({
