@@ -63,6 +63,22 @@
   height: 100%;
 }
 
+#play-buttons-text {
+  position: fixed;
+  top: 5%;
+  
+  margin-left: 2.5%;
+  
+  font: 500 66px 'Roboto Condensed';
+  color: rgb(80,80,80);
+}
+
+#play-buttons-text.background--light {}
+
+#play-buttons-text.background--dark, #play-buttons-text.background--complex {
+  color: rgb(255,255,255);
+}
+
 #play-buttons {
   position: fixed;
   top: 20%;
