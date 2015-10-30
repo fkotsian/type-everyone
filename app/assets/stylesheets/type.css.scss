@@ -1,7 +1,7 @@
 #slideout-menu-area {
   position: fixed;
   height: 100%;
-  width: 33%;
+  width: 46%;
   top: 0px;
   bottom: 0px;
   
@@ -12,7 +12,7 @@
 
 #slideout-menu {
   position: relative;
-  width: 60%;
+  width: 43%;
   height: 100%;
   
   left: -100%;
@@ -21,7 +21,7 @@
 
   z-index: 1000;
   
-  background: rgba(80,80,80, 0.9);
+  background: rgba(242,242,242, 0.8);
   color: white;
   
   -webkit-transition: all 0.5s ease-out 0s;
@@ -31,6 +31,14 @@
 
 #slideout-menu-area:hover #slideout-menu {
   left: 0%;
+}
+
+#slideout-menu.background--light {
+  background: rgba(242,242,242, 0.8);
+}
+
+#slideout-menu.background--dark, #slideout-menu.background--complex {
+  background: rgba(220,220,220, 0.7);
 }
 
 #play-container {

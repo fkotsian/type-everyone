@@ -18,55 +18,57 @@
       .row
         .col-md-12
           #play-buttons-holder
+            #play-buttons-text
+              TYPE?
             #play-buttons
               = form_for(@vote) do |f|
                 = f.hidden_field(:figure_id)
                 .col-md-6
                   .row
-                    = f.submit("ENFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'enfp-btn')
+                    = f.submit("ENFP", class: 'btn material-btn mbti-btn btn-lg', id: 'enfp-btn')
                   .row
-                    = f.submit("ENFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'enfj-btn')
+                    = f.submit("ENFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'enfj-btn')
                      
                   .row
-                    = f.submit("INTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'intp-btn')
+                    = f.submit("INTP", class: 'btn material-btn mbti-btn btn-lg', id: 'intp-btn')
                   .row
-                    = f.submit("INTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'intj-btn')
+                    = f.submit("INTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'intj-btn')
 
                   .row
-                    = f.submit("ESTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'estp-btn')
+                    = f.submit("ESTP", class: 'btn material-btn mbti-btn btn-lg', id: 'estp-btn')
                   .row
-                    = f.submit("ESFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'esfp-btn')
+                    = f.submit("ESFP", class: 'btn material-btn mbti-btn btn-lg', id: 'esfp-btn')
 
                   .row
-                    = f.submit("ISFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'isfj-btn')
+                    = f.submit("ISFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'isfj-btn')
                   .row
-                    = f.submit("ISTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'istj-btn')
+                    = f.submit("ISTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'istj-btn')
                     
                 .col-md-6
                   .row
-                    = f.submit("INFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'infp-btn')
+                    = f.submit("INFP", class: 'btn material-btn mbti-btn btn-lg', id: 'infp-btn')
                   .row
-                    = f.submit("INFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'infj-btn')                
+                    = f.submit("INFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'infj-btn')                
 
                   .row
-                    = f.submit("ENTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'entp-btn')
+                    = f.submit("ENTP", class: 'btn material-btn mbti-btn btn-lg', id: 'entp-btn')
                   .row
-                    = f.submit("ENTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'entj-btn')
+                    = f.submit("ENTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'entj-btn')
                     
                   .row
-                    = f.submit("ISTP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'istp-btn')
+                    = f.submit("ISTP", class: 'btn material-btn mbti-btn btn-lg', id: 'istp-btn')
                   .row
-                    = f.submit("ISFP", class: 'btn ghost-btn mbti-btn btn-lg', id: 'isfp-btn')
+                    = f.submit("ISFP", class: 'btn material-btn mbti-btn btn-lg', id: 'isfp-btn')
 
                   .row
-                    = f.submit("ESFJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'esfj-btn')
+                    = f.submit("ESFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'esfj-btn')
                   .row
-                    = f.submit("ESTJ", class: 'btn ghost-btn mbti-btn btn-lg', id: 'estj-btn')
+                    = f.submit("ESTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'estj-btn')
                                                                
           
 :javascript
   console.log("Doing the JS thing");
   BackgroundCheck.init({
-    targets: '.mbti-btn, #figure-name, #figure-description',
+    targets: '.mbti-btn, #figure-name, #figure-description, #slideout-menu',
     images: '#play-container'
   });

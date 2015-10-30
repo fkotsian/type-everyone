@@ -75,6 +75,24 @@ body, h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
+.material-btn {
+  color: rgb(245,245,245);
+//  background-color: rgb(80,80,80);
+  display: inline-block;
+  
+  border-radius: 0.1;
+  
+	-webkit-box-shadow: 0 8px 4px -6px black;
+	   -moz-box-shadow: 0 8px 4px -6px black;
+       -o-box-shadow: 0 8px 4px -6px black;
+	        box-shadow: 0 8px 4px -6px black;
+}
+
+.material-btn:hover {
+  color: inherit;
+  background-color: rgb(180,180,180);
+}
+
 .invis-btn {
   font-style: italic;
   font-size: 1em;
@@ -87,9 +105,9 @@ body, h1, h2, h3, h4, h5, h6 {
 	color: #F2F2F2;
   border-color: #F2F2F2;
   
-	-webkit-border-radius: 0.5;
-	-moz-border-radius:    0.5;
-	border-radius:         0.5;
+//  -webkit-border-radius: 0.5;
+//  -moz-border-radius:    0.5;
+//  border-radius:         0.5;
 
 	/* CSS Transition */
 	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
