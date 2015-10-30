@@ -7,7 +7,12 @@
 - set up google analytics
 - let er rip
 
-
+- add navbar w/ "Suggest?" // "Upload" button
+- add flash message to game "You typed (Personage) as (Type)!" (green success color, translucent .8)
+- add "I don't know this personage" button in bottom right
+- add share buttons to bottom right
+- add "Cool!" button to bottom right (cool factor, ppl glad this is on here)
+- upvote/downvote personages?
 
 
 
