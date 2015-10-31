@@ -78,7 +78,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .material-btn {
   color: rgb(245,245,245);
-//  background-color: rgb(80,80,80);
+  background-color: rgb(102,102,102);
   display: inline-block;
   
   border-radius: 0.1;
@@ -91,7 +91,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .material-btn:hover {
   color: inherit;
-  background-color: rgb(180,180,180);
+  background-color: rgba(153,153,103, 0.85);
 }
 
 .invis-btn {
