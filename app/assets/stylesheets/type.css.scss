@@ -1,23 +1,21 @@
 #slideout-menu-area {
   position: fixed;
-  height: 100%;
-  width: 46%;
-  top: 0px;
-  bottom: 0px;
+  height: 40%;
+  width: 100%;
+  top: 60%;
+  bottom: 0%;
   
-  -webkit-transition: all 0.5s ease-out 0s;
-  -moz-transition: all 0.5s ease-out 0s;
-  transition: all 0.5s ease-out 0s;  
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;  
 }
 
 #slideout-menu {
   position: relative;
-  width: 43%;
-  height: 100%;
+  width: 100%;
+  height: 90%;
   
-  left: -100%;
-  top: 0%;
-  bottom: 0%;
+  bottom: -100%;
 
   z-index: 1000;
   
@@ -61,27 +59,32 @@
 #play-buttons-holder {
   position: relative;
   height: 100%;
+  margin-top: 3%;
 }
 
-#play-buttons-text {
-  position: fixed;
-  top: 5%;
-  
-  margin-left: 2%;
-  
-  font: 500 66px 'Roboto';
-  color: rgb(80,80,80);
+.play-buttons-title {
+  font: 100 20px 'Roboto';
+  color: rgb(95,95,95);
+  letter-spacing: .3em;
 }
+
+//#play-buttons-text {
+//  position: fixed;
+//  top: 5%;
+//
+//  margin-left: 2%;
+//
+//  font: 500 66px 'Roboto';
+//  color: rgb(80,80,80);
+//}
 
 #play-buttons-text.background--light {}
 
-#play-buttons-text.background--dark, #play-buttons-text.background--complex {
-  color: rgb(255,255,255);
-}
+#play-buttons-text.background--dark, #play-buttons-text.background--complex {}
 
 #play-buttons {
-  position: fixed;
-  top: 20%;
+//  position: fixed;
+//  top: 20%;
 }
 
 #figure-holder {
