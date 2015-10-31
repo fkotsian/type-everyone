@@ -7,7 +7,7 @@
 
   position: absolute;
   overflow: hidden;
-  top: 0px;  /* Header height */
+  top: 0%;  /* Header height */
   bottom: 0px;  /* Footer height */
   width: 100%;
 }
@@ -19,7 +19,7 @@
 
 /* FIGURE ATTRS */
 
-#figure-holder {}
+#figure-info-wrapper {}
 
 #figure-name {
   font: 400 88px 'Roboto Condensed';

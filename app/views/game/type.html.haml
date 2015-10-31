@@ -1,17 +1,18 @@
 #play-container{ :style => "background-image: url('#{asset_url @figure_image}');" }
   .play-container-shade
 
-    .row
-      .col-md-12
-        .highlighted.text-center
-          %h1#figure-name #{@figure.name.upcase || " "}
-          %h1#figure-description #{@figure.description.upcase || " "}
+    #figure-info-wrapper
+      .row
+        .col-md-12
+          .highlighted.text-center
+            %h1#figure-name #{@figure.name.upcase || " "}
+            %h1#figure-description #{@figure.description.upcase || " "}
       
-    .row
-      .col-md-offset-8.col-md-2
-        #next-button-holder
-          %a{href: '/type', class: 'btn mbti-btn btn-lg', id: 'next-button'} 
-            %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
+      .row
+        .col-md-offset-8.col-md-2
+          #next-button-holder
+            %a{href: '/type', class: 'btn mbti-btn btn-lg', id: 'next-button'} 
+              %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
 
 #slideout-menu-area
   #slideout-menu
