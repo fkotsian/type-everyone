@@ -1,0 +1,43 @@
+#navbar-slide-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  
+  height: 38%;
+  width: 100%; 
+}
+
+#navbar-wrapper {
+  position: relative;
+  top: -50%;
+  height: 100%;
+  width: 100%;
+  
+  z-index: 100;
+  
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;  
+}
+
+#navbar-slide-area:hover #navbar-wrapper {
+  top: 0%;
+}
+
+.navbar {
+  z-index: 10000;
+  opacity: 0.9;
+  
+  height: 5.55em !important;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -.2em;
+}
+
+.navbar-right li {
+  margin-top: 1em;
+  font-size: 15px !important;
+}
