@@ -97,11 +97,12 @@
 }
 
 #figure-description {
-  font: 400 48px 'Roboto Condensed';
-  color: #F2F2F2;
-  position: fixed;
-  left: 33%;
-  top: 40%;
+  font: 100 24px 'Roboto';
+  color: rgb(242,242,242);
+  letter-spacing: .43em;
+  
+  margin-top: 0;
+  padding-bottom: 0.65em;
 }
 
 .mbti-btn {
