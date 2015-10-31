@@ -67,9 +67,9 @@
   position: fixed;
   top: 5%;
   
-  margin-left: 2.5%;
+  margin-left: 2%;
   
-  font: 500 66px 'Roboto Condensed';
+  font: 500 66px 'Roboto';
   color: rgb(80,80,80);
 }
 
@@ -90,6 +90,10 @@
 #figure-name {
   font: 400 88px 'Roboto Condensed';
   color: #F2F2F2;
+}
+
+#figure-name.highlighted {
+  color: #333;
 }
 
 #figure-description {
@@ -153,28 +157,28 @@
   color: #000;
 }
 
-#figure-name.background--light {
-  color: #333;
-}
+//#figure-name.background--light {
+//  color: #333;
+//}
 #figure-name.background--dark {
   color: #F2F2F2;
 }
-#figure-name.background--complex {
-  color: #F2F2F2;
-}
-#figure-name.background-light.background--complex {
-  color: #F2F2F2;
-}
+//#figure-name.background--complex {
+//  color: #F2F2F2;
+//}
+//#figure-name.background-light.background--complex {
+//  color: #F2F2F2;
+//}
 
-#figure-description.background--light {
-  color: #333;
-}
-#figure-description.background--dark {
-  color: #F2F2F2;
-}
-#figure-description.background--dark.background--complex {
-  color: #333;
-}
-#figure-description.background--light.background--complex {
-  color: #F2F2F2;
-}
+//#figure-description.background--light {
+//  color: #333;
+//}
+//#figure-description.background--dark {
+//  color: #F2F2F2;
+//}
+//#figure-description.background--dark.background--complex {
+//  color: #333;
+//}
+//#figure-description.background--light.background--complex {
+//  color: #F2F2F2;
+//}
