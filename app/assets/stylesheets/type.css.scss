@@ -1,3 +1,63 @@
+/* PLAY CONTAINER */
+
+#play-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  position: absolute;
+  overflow: hidden;
+  top: 0px;  /* Header height */
+  bottom: 0px;  /* Footer height */
+  width: 100%;
+}
+
+#play-container-shade {
+//  background-color: rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+/* FIGURE ATTRS */
+
+#figure-holder {}
+
+#figure-name {
+  font: 400 88px 'Roboto Condensed';
+  color: #F2F2F2;
+}
+
+#figure-name.highlighted {
+  color: #333;
+}
+
+#figure-description {
+  font: 100 24px 'Roboto';
+  color: rgb(242,242,242);
+  letter-spacing: .43em;
+  
+  margin-top: 0;
+  padding-bottom: 0.65em;
+}
+
+
+/* PLAY BUTTONS */
+
+#play-buttons-holder {
+  position: relative;
+  height: 100%;
+  margin-top: 3%;
+}
+
+.play-buttons-title {
+  font: 100 20px 'Roboto';
+  color: rgb(95,95,95);
+  letter-spacing: .3em;
+}
+
+#play-buttons {}
+
+/* SLIDEOUT MENU */
+
 #slideout-menu-area {
   position: fixed;
   height: 40%;
@@ -31,82 +91,12 @@
   bottom: -20%;
 }
 
-#slideout-menu.background--light {
-//  background: rgba(242,242,242, 0.8);
-}
+#slideout-menu.background--light {}
 
-#slideout-menu.background--dark, #slideout-menu.background--complex {
-//  background: rgba(242,242,242, 0.6);
-}
+#slideout-menu.background--dark, #slideout-menu.background--complex {}
 
-#play-container {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
 
-  position: absolute;
-  overflow: hidden;
-  top: 0px;  /* Header height */
-  bottom: 0px;  /* Footer height */
-  width: 100%;
-}
-
-#play-container-shade {
-//  background-color: rgba(0,0,0,0.25);
-  z-index: 10;
-}
-
-#play-buttons-holder {
-  position: relative;
-  height: 100%;
-  margin-top: 3%;
-}
-
-.play-buttons-title {
-  font: 100 20px 'Roboto';
-  color: rgb(95,95,95);
-  letter-spacing: .3em;
-}
-
-//#play-buttons-text {
-//  position: fixed;
-//  top: 5%;
-//
-//  margin-left: 2%;
-//
-//  font: 500 66px 'Roboto';
-//  color: rgb(80,80,80);
-//}
-
-#play-buttons-text.background--light {}
-
-#play-buttons-text.background--dark, #play-buttons-text.background--complex {}
-
-#play-buttons {
-//  position: fixed;
-//  top: 20%;
-}
-
-#figure-holder {
-}
-
-#figure-name {
-  font: 400 88px 'Roboto Condensed';
-  color: #F2F2F2;
-}
-
-#figure-name.highlighted {
-  color: #333;
-}
-
-#figure-description {
-  font: 100 24px 'Roboto';
-  color: rgb(242,242,242);
-  letter-spacing: .43em;
-  
-  margin-top: 0;
-  padding-bottom: 0.65em;
-}
+/* MBTI and NEXT BUTTONS */
 
 .mbti-btn {
   width: 5em;
@@ -146,7 +136,7 @@
  color: #fff;
 }
 
-/* BackgroundCheck modified styles */
+/* BACKGROUND-CHECK modified styles */
 
 .background--light #next-button-arrow {
   color: #333; 
@@ -161,22 +151,3 @@
 #figure-name.background--dark, #figure-description.background--dark {
   color: #F2F2F2;
 }
-//#figure-name.background--complex {
-//  color: #F2F2F2;
-//}
-//#figure-name.background-light.background--complex {
-//  color: #F2F2F2;
-//}
-
-//#figure-description.background--light {
-//  color: #333;
-//}
-//#figure-description.background--dark {
-//  color: #F2F2F2;
-//}
-//#figure-description.background--dark.background--complex {
-//  color: #333;
-//}
-//#figure-description.background--light.background--complex {
-//  color: #F2F2F2;
-//}
