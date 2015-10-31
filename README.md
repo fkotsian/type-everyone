@@ -14,7 +14,8 @@
 - add "Cool!" button to bottom right (cool factor, ppl glad this is on here)
 - upvote/downvote personages?
 
-
+- perhaps move figure title to the side with 'fixed'?
+- perhaps standardize navbar (always on, on top), and displace container down 80-120px. Want to see what this looks like.
 
 Users can create a unique figure with a photo
 Users can view figures by category
