@@ -11,12 +11,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container" id="flash">
-    <%= render partial: 'shared/flash' %>
-  </div>
   
-
+  <%= render 'shared/flash' %>
   <%= render 'shared/navbar' %>  
+  <%= render 'shared/upload_modal' %>
   <div class="" id="content-wrapper">
     <%= yield %>
   </div>

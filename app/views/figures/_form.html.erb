@@ -1,12 +1,28 @@
-<%= form_for @figure do %>
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
-    <%= f.fields_for :figure_images do |builder| %>
-      <%= render "figure_images/figure_image_fields", :f => builder %>
+<%= form_for Figure.new do |f| %>
+  <div class="form-group">
+    <%= f.label 'Name: ' %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :figure_images do |img_fields| %>
+      <label for="figure_figure_images_url">Image URL: </label>
+      <%= img_fields.text_field :url, class: "form-control" %>
+      <br>
+      <i>Images must be high-quality, 800x500 or greater to be considered. Google Images is a good resource.</i>
     <% end %>
-    <p>
-      <%= f.submit "Submit" %>
-    </p>
+  </div>
+  <div class="form-group">
+    <label for="figure_figure_category_name">What category do they fall under?</label>
+    <%= f.collection_select(
+      :figure_category, 
+      FigureCategory.all, 
+      :name, 
+      :display_name,
+      {},
+      class: "form-control")
+    %>
+  </div>
+    <div class="form-group">
+    <%= f.submit "Submit Your Figure", class: 'btn btn-primary form-control' %>
+  </div>
 <% end %>

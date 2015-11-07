@@ -11,7 +11,8 @@ class FiguresController < ApplicationController
 
   def new
     @figure = Figure.new
-    @figure.figure_images.build
+    @figure.images.build
+    flash[:success] = "Yes!"
   end
 
   def create

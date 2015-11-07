@@ -5,8 +5,8 @@
       .row
         .col-md-12
           .highlighted.text-center
-            %h1#figure-name #{@figure.name.upcase || " "}
-            %h1#figure-description #{@figure.description.upcase || " "}
+            %h1#figure-name #{@figure.name.upcase}
+            %h1#figure-description #{@figure.display_description}
       
       .row
         .col-md-offset-8.col-md-2

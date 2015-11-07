@@ -1,13 +1,26 @@
-<div id="flash-wrapper">
-  <% if flash[:success] %>
-    <div id="success" class="alert alert-success">
-      <%= flash[:success] %>
-    </div>
-  <% end %>
+<div class="container" id="flash">
+  <div id="flash-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <% if flash[:success] %>
+          <div id="success" class="alert alert-success">
+            <%= flash[:success] %>
+          </div>
+        <% end %>
   
-  <% if flash[:error] %>
-    <div id="error" class="alert alert-danger">
-      <%= flash[:error] %>
+        <% if flash[:error] %>
+          <div id="error" class="alert alert-danger">
+            <%= flash[:error] %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
+  </div>
 </div>
+
+
+$(function() {
+   $('#flash').delay(500).fadeIn('normal', function() {
+      $(this).delay(500).fadeOut();
+   });
+});

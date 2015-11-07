@@ -1,28 +1,16 @@
-<div class="row">
-  <div class="col-md-offset-3 col-md-6 text-center">
-    <h1>Add Your Favorites</h1>
+<div class="container">
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6 text-center">
+      <h1>Add Your Favorite Figures</h1>
+    </div>
   </div>
-</div>
 
-<br>
+  <br><br>
 
-<div class="row">
-  <div class="col-md-offset-3 col-md-6">
-    <%= form_for @figure, html: {} do |f| %>
-      <%= f.label "Who is this?" %>
-      <%= f.text_field :name, class: 'form-control' %><br>
-      <%= f.label "What category do they fall under?" %>
-      <p>Figure Categories</p>
-
-      <%= fields_for :figure_image do |f| %>
-        <%= f.label "Where is your image? (URL)" %>
-        <%= f.text_field :url,  class: 'form-control' %><br>
-        <%= f.label "How big is the image?" %>
-        <%= f.text_field :size, class: 'form-control' %>
-      <% end %>
-  
-      <br>
-      <%= f.submit "Submit Your Figure", class: "btn btn-primary" %>
-    <% end %>
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <%= render 'figures/form' %>
+    </div>
   </div>
 </div>

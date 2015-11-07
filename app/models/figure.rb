@@ -1,5 +1,5 @@
 class Figure < ActiveRecord::Base
-  validates :name, uniqueness: true
+  validates :name, presence: true, uniqueness: true
   
   belongs_to :figure_category
   has_many :images, class_name: 'FigureImage', dependent: :destroy
@@ -27,8 +27,16 @@ class Figure < ActiveRecord::Base
     end
   end
   
+  def display_name
+    name.upcase
+  end
+  
+  def display_description
+    description ? description.upcase : ""
+  end
+  
   def self.random_figure
-    rand_id = rand(count) + 1
-    Figure.find_by_id rand_id
+    rand_id = rand(count)
+    Figure.all[rand_id]
   end
 end
