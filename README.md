@@ -1,5 +1,54 @@
 #TypeEverything
 
+REQUIREMENTS:
+* Uploader
+  - Name of figure
+  - Description ("Who is this person?")
+  - Image URL or photopicker
+      - Reject if < correct dimensions (must be at least 800x600, preferably evokes an emotion or illustrates/captures the person)
+  - Dropdown of category
+  - Uploader name
+  - Multi-upload (10 at once, 100 at once - whatever batch size is)
+      - Credits to uploader ("Uploaded by" field)
+* Categories on homepage:
+  - Musicians and Artists
+  - Politicians, Scientists, and Historical Figures
+  - Celebrities, Actors, and Athletes
+  - TV, Movie, and Fictional Characters
+* Homepage: TYPEEVERYTHING
+
+
+P1.5:
+* On click, show percentage of people who agree with your vote
+  - Fade in 0.2s, fade out 0.5s
+* "Submit Photos!" button
+  - Link to uploader
+
+P2:
+* "Do you have a better picture of this figure? Click here to upload!" button
+* A/B testing of figure images (multiple images/image URLs)
+
+
+P3:
+* Flag inappropriate pictures (mark as flagged, flagged images don't show)
+* Flag description (=> "Suggest alternate description")
+    
+
+FIGURES TABLE
+- name
+- image-url-id (has-many)
+- figure-category (or category-tags) (has-many)
+- uploader-name (account name?)
+
+
+
+
+
+
+=====================================================================
+####OLD
+
+
 Upload page exists - perhaps is just a modal?
 	- name
 	- upload (required)
