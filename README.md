@@ -7,6 +7,9 @@ Upload page exists - perhaps is just a modal?
 Users can create a unique figure with a photo
 Better flash message - flashes white on grey background across screen, fades out - javascript
 
+Have selection menu be presented on page load
+
+
 
 Users can view figures by category
 Categories are displayed at the top of the page

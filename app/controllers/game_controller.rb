@@ -9,6 +9,5 @@ class GameController < ApplicationController
     @figure = Figure.random_figure
     @figure_image = @figure.rand_image_url
     @vote = Vote.new(figure_id: @figure.id)
-    flash[:error] = "OG NO"
   end
 end

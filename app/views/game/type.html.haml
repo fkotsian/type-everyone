@@ -7,22 +7,16 @@
           .highlighted.text-center
             %h1#figure-name #{@figure.name.upcase}
             %h1#figure-description #{@figure.display_description}
-      
-      .row
-        .col-md-offset-8.col-md-2
-          #next-button-holder
-            %a{href: '/type', class: 'btn mbti-btn btn-lg', id: 'next-button'} 
-              %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
 
 #slideout-menu-area
   #slideout-menu
     .container
-      .row
-        .col-md-12
-          #play-buttons-holder
-            #play-buttons-text
-              / TYPE?
-            #play-buttons.text-center
+      #play-buttons-holder
+        #play-buttons-text
+          / TYPE?
+        #play-buttons.text-center
+          .row
+            .col-md-11
               = form_for(@vote) do |f|
                 = f.hidden_field(:figure_id)
 
@@ -68,11 +62,20 @@
                   .col-md-3
                     = f.submit("ESFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'esfj-btn')
                     = f.submit("ESTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'estj-btn')
+                
+            .col-md-1
+              #next-button-holder
+                %a{href: '/type', class: 'btn btn-lg', id: 'next-button'} 
+                  %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
                                                                
           
 :javascript
+  $(function() {
+    $('#slideout-menu-area').trigger('mouseover');
+  });
   console.log("Doing the JS thing");
   BackgroundCheck.init({
     targets: '.mbti-btn, #figure-name, #figure-description, #slideout-menu',
     images: '#play-container'
   });
+  
