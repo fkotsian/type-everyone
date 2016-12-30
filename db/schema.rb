@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150912034912) do
+ActiveRecord::Schema.define(version: 20161230094426) do
 
   create_table "figure_categories", force: true do |t|
     t.string   "name",       null: false
@@ -22,11 +22,12 @@ ActiveRecord::Schema.define(version: 20150912034912) do
   add_index "figure_categories", ["name"], name: "index_figure_categories_on_name", unique: true
 
   create_table "figure_images", force: true do |t|
-    t.string   "url",        null: false
+    t.string   "url",         null: false
     t.string   "size"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "figure_id"
+    t.string   "uploaded_by"
   end
 
   add_index "figure_images", ["figure_id"], name: "index_figure_images_on_figure_id", unique: true

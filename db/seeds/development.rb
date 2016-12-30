@@ -1,11 +1,8 @@
 figure_category_list = [
-  :celebrities,
-  :athletes, 
-  :intellectuals, 
-  :artists_and_writers,
-  :musicians,
-  :political_figures,
-  :fictional_characters
+  :musicians_and_artists,
+  :celebrities_actors_and_athletes,
+  :politicians_scientists_and_historical_figures, 
+  :tv_movie_and_fictional_characters
 ]
 
 figure_categories = figure_category_list.map do |category_name|
@@ -38,133 +35,133 @@ end
 figure_list = [
   #name, category, image, description
   ['Benjamin Franklin', 
-    :historical_figures, 
+    :politicians_scientists_and_historical_figures, 
     {url: 'benjamin_franklin.jpg'},
     'Founding Father, Inventor, Statesman'
   ],
   [
     'Katy Perry',
-    :musicians,
+    :musicians_and_artists,
     {url: 'katy_perry.jpg'},
     'Kissed a Girl and Liked It'
   ],
   [
     'Leonardo DiCaprio',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'leonardo_dicaprio.jpg'},
     'Actor'
   ],
   [
     'Jonah Hill',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'jonah_hill.jpg'},
     'Actor'
   ],
   [
     'Matt Bellamy',
-    :musicians,
+    :musicians_and_artists,
     {url: 'matt_bellamy.jpg'},
     'Frontman, Muse'
   ],
   [
     'RZA',
-    :musicians,
+    :musicians_and_artists,
     {url: 'rza.jpg'},
     'Rapper, Wu-Tang Clan'
   ],
   [
     'David Heinemeier Hansson',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'dhh.png'},
     'Creator, Ruby on Rails'
   ],
   [
     'Curtis Jackson',
-    :musicians,
+    :musicians_and_artists,
     {url: 'fifty.jpg'},
     'Rapper 50 Cent'
   ],
   [
     'Dave Chappelle',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'dave_chappelle.jpg'},
     'Comedian'
   ],
   [
     'Ray Kurzweil',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'kurzweil.jpg'},
     'Author, The Singularity Is Near'
   ],
   [
     'James Hetfield',
-    :musicians,
+    :musicians_and_artists,
     {url: 'james_hetfield.jpg'},
     'Singer, Metallica'
   ],
   [
     'Bob Dylan',
-    :musicians,
+    :musicians_and_artists,
     {url: 'dylan.jpg'},
     'Musician'
   ],
   [
     'Bob Marley',
-    :musicians,
+    :musicians_and_artists,
     {url: 'bob_marley.jpg'},
     'Musician and Rastafarian'
   ],
   [
     'Zach de la Rocha',
-    :musicians,
+    :musicians_and_artists,
     {url: 'zach_de_la_rocha.jpg'},
     'Singer, Rage Against the Machine'
   ],
   [
     'Laura Jane Grace',
-    :musicians,
+    :musicians_and_artists,
     {url: 'laura_jane_grace.jpg'},
     'Singer, Against Me!'
   ],
   [
     'Tony Robbins',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'tony_robbins.jpg'},
     'Motivational Speaker'
   ],
   [
     'Pitbull',
-    :musicians,
+    :musicians_and_artists,
     {url: 'pitbull.jpg'},
     'Artist'
   ],
   [
     'Steve Jobs',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'steve_jobs.jpg'},
     'Founder, Apple Computer'
   ],
   [
     'Bill Gates',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'bill_gates.jpg'},
     'Founder, Microsoft'
   ],
   [
     'Matt Damon',
-    :musicians,
+    :musicians_and_artists,
     {url: 'matt_damon.jpg'},
     'Actor'
   ],
   [
     'Ben Affleck',
-    :musicians,
+    :musicians_and_artists,
     {url: 'ben_affleck.jpg'},
     'Actor'
   ],
   [
     'Kate Hudson',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'kate_hudson.jpg'},
     'Actress'
   ],
@@ -176,361 +173,361 @@ figure_list = [
   ],
   [
     'Jay-Z',
-    :musicians,
+    :musicians_and_artists,
     {url: 'jay_z.jpg'},
     'Rapper'
   ],
   [
     'Beyonce Knowles',
-    :musicians,
+    :musicians_and_artists,
     {url: 'beyonce.jpg'},
     'Artist'
   ],
   [
     'Kobe Bryant',
-    :athletes,
+    :celebrities_actors_and_athletes,
     {url: 'kobe_bryant.jpg'},
     'Shooting Guard, Los Angeles Lakers'
   ],
   [
     'LeBron James',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'lebron_james.jpg'},
     'Forward, Cleveland Cavaliers'
   ],
   [
     'Peter Thiel',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'peter_thiel.jpg'},
     'Founder, Paypal'
   ],
   [
     'Warren Buffett',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'warren_buffett.jpg'},
     'Investor'
   ],
   [
     'Charlie Munger',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'charlie_munger.jpg'},
     'Investment Partner of Warren Buffett'
   ],
   [
     'Quincy Jones',
-    :musicians,
+    :musicians_and_artists,
     {url: 'quincy_jones.jpg'},
     'Composer'
   ],
   [
     'Aaron McGruder',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'aaron_mcgruder.jpg'},
     'Satirist, The Boondocks'
   ],
   [
     'Ashton Kutcher',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'ashton_kutcher.jpg'},
     'Actor and Investor'
   ],
   [
     'Snoop Lion',
-    :musicians,
+    :musicians_and_artists,
     {url: 'snoop_dogg.jpg'},
     'Musician'
   ],
   [
     'Jeff Bezos',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'jeff_bezos.jpg'},
     'CEO, Amazon.com'
   ],
   [
     'Larry Page',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'larry_page.jpg'},
     'CEO, Google'
   ],
   [
     'Common',
-    :musicians,
+    :musicians_and_artists,
     {url: 'common.JPG'},
     'Rapper'
   ],
   [
     'Peanut Butter Wolf',
-    :musicians,
+    :musicians_and_artists,
     {url: 'peanut_butter_wolf.jpg'},
     "Founder, Stones Throw Records"
   ],
   [
     'J Dilla',
-    :musicians,
+    :musicians_and_artists,
     {url: 'j_dilla.jpg'},
     'Hip-hop Producer'
   ],
   [
     'James Pants',
-    :musicians,
+    :musicians_and_artists,
     {url: 'james_pants.jpg'},
     'Indie DJ'
   ],
   [
     "Conan O'Brien",
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'conan.jpg'},
     "Host, Late Night with Conan O'Brien"
   ],
   [
     'Arnold Schwarzenegger',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'arnold.jpg'},
     'Bodybuilder, Actor, Politician'
   ],
   [
     'Tyler the Creator',
-    :musicians,
+    :musicians_and_artists,
     {url: 'tyler.jpg'},
     'Rapper, Odd Future'
   ],
   [
     'Earl Sweatshirt',
-    :musicians,
+    :musicians_and_artists,
     {url: 'earl_sweatshirt.jpg'},
     'Rapper, Odd Future'
   ],
   [
     'Tim Bergling',
-    :musicians,
+    :musicians_and_artists,
     {url: 'avicii.jpg'},
     'Avicii'
   ],
   [
     'BJ Fogg',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'bj_fogg.jpg'},
     'Professor of Persuasive Technology, Stanford University'
   ],
   [
     'Tim Ferriss',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'tim_ferriss.jpg'},
     'Author, The Four-Hour Workweek, Body, Chef'
   ],
   [
     'Seth Rogen',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'seth_rogen.jpg'},
     'Actor'
   ],
   [
     'James Franco',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'james_franco.jpg'},
     'Actor, "Professor"'
   ],
   [
     'Carl Cox',
-    :musicians,
+    :musicians_and_artists,
     {url: 'carl_cox.jpg'},
     'British House DJ'
   ],
   [
     'Steve Aoki',
-    :musicians,
+    :musicians_and_artists,
     {url: 'steve_aoki.jpg'},
     'DJ, Producer'
   ],
   [
     'Benny Benassi',
-    :musicians,
+    :musicians_and_artists,
     {url: 'benny_benassi.jpg'},
     'DJ, Satisfaction'
   ],
   [
     'Ann Coulter',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'ann_coulter.jpg'},
     'Political Commentator'
   ],
   [
     'Scott Mescudi',
-    :musicians,
+    :musicians_and_artists,
     {url: 'kid_cudi.jpg'},
     'Kid Cudi'
   ],
   [
     'Paul Rudd',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'paul_rudd.jpg'},
     'Actor'
   ],
   [
     'Tom Brady',
-    :athletes,
+    :celebrities_actors_and_athletes,
     {url: 'tom_brady.jpg'},
     'Quarterback, New England Patriots'
   ],
   [
     'Peyton Manning',
-    :athletes,
+    :celebrities_actors_and_athletes,
     {url: 'peyton_manning.jpg'},
     'Quarterback, Denver Broncos'
   ],
   [
     'Eli Manning',
-    :athletes,
+    :celebrities_actors_and_athletes,
     {url: 'eli_manning.jpg'},
     'Quarterback, New York Giants'
   ],
   [
     'Steve Carell',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'steve_carell.jpg'},
     'Actor, Comedian'
   ],
   [
     'Zooey Deschanel',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'zooey_deschanel.jpg'},
     'Actress, Singer'
   ],
   [
     'Gillian Anderson',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'gillian_anderson.jpg'},
     'Actress, The X-Files'
   ],
   [
     'Steven Pinker',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'steven_pinker.jpg'},
     'Psychologist, Harvard University'
   ],
   [
     'Howard Gardner',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'howard_gardner.jpg'},
     'Professor and Author, The Theory of Multiple Intelligences'
   ],
   [
     'Scarlett Johansson',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'scarlett_johansson.jpg'},
     'Actress'
   ],
   [
     'Joseph Gordon Levitt',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'joseph_gordon_levitt.png'},
     'Actor'
   ],
   [
     'James Harden',
-    :athletes,
+    :celebrities_actors_and_athletes,
     {url: 'james_harden.jpg'},
     'Shooting Guard, Houston Rockets'
   ],
   [
     'Usher',
-    :musicians,
+    :musicians_and_artists,
     {url: 'usher.jpg'},
     'RnB Singer, Dancer'
   ],
   [
     'Russell Brand',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'russell_brand.jpg'},
     'Actor, Comedian'
   ],
   [
     'Winston Churchill',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'winston_churchill.jpg'},
     '"Tact is the ability to tell someone to go to hell in such a way that they look forward to the trip."'
   ],
   [
     'Bill Clinton',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'bill_clinton.jpg'},
     'Founder, Clinton Foundation'
   ],
   [
     'Martin Scorcese',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'martin_scorcese.jpg'},
     'Filmmaker'
   ],
   [
     'George W. Bush',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'george_w_bush.jpg'},
     '43rd President of the United States'
   ],
   [
     'Hillary Clinton',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'hillary_clinton.jpg'},
     'Candidate, 45th President of the United States'
   ],
   [
     'Mahatma Mohandas Gandhi',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'gandhi.jpg'},
     'Revolutionary'
   ],
   [
     'Che Guevara',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'che_guevara.jpg'},
     'Revolutionary'
   ],
   [
     'Malcolm X',
-    :political_figures,
+    :politicians_scientists_and_historical_figures,
     {url: 'malcolm_x.jpg'},
     'Minister, Activist'
   ],
   [
     'Stephen Colbert',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'stephen_colbert.jpg'},
     'Comedian, Host'
   ],
   [
     'John Stewart',
-    :celebrities,
+    :celebrities_actors_and_athletes,
     {url: 'jon_stewart.jpg'},
     'Comedian, Anchor'
   ],
   [
     'Leonardo da Vinci',
-    :intellectuals,
+    :politicians_scientists_and_historical_figures,
     {url: 'leonardo_da_vinci.jpg'},
     'Renaissance Man'
   ],
   [
     'Hunter S. Thompson',
-    :artists_and_writers,
+    :musicians_and_artists,
     {url: 'hunter_s_thompson.jpg'},
     'Author, "Fear and Loathing in Las Vegas"'
   ],
   [
     'Mark Twain',
-    :artists_and_writers,
+    :musicians_and_artists,
     {url: 'mark_twain.jpg'},
     'Author, Satirist'
   ],
   [
     'Kurt Vonnegut',
-    :artists_and_writers,
+    :musicians_and_artists,
     {url: 'kurt_vonnegut.jpg'},
     'Author'
   ],
   [
     'Salvador Dali',
-    :artists_and_writers,
+    :musicians_and_artists,
     {url: 'dali.jpg'},
     'Painter, Surrealist'
   ],

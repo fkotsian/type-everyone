@@ -1,5 +1,9 @@
 #TypeEverything
 
+PROGRESS:
+* Get nested form_for working
+* Have livereload and nearly complete form
+
 REQUIREMENTS:
 * Uploader
   - Name of figure
