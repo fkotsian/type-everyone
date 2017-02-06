@@ -36,6 +36,9 @@ P2:
 P3:
 * Flag inappropriate pictures (mark as flagged, flagged images don't show)
 * Flag description (=> "Suggest alternate description")
+
+P4:
+* Material design flow outward click effect :)
     
 
 FIGURES TABLE

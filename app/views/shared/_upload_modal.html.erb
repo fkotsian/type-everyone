@@ -17,7 +17,7 @@
           <%= f.collection_select(
             :figure_category, 
             FigureCategory.all, 
-            :name, 
+            :id, 
             :display_name,
             {},
             class: "form-control")
@@ -35,7 +35,7 @@
             <label for="figure_figure_images_url" class="figure-attr-label">Image URL: </label>
             <%= img_fields.text_field :url, class: "form-control", placeholder: 'https://en.wikipedia.org/wiki/Ben_Franklin_800_600.jpg'%>
             <label for="figure_figure_images_uploaded_by" class="figure-attr-label">Your Name (for credit, feel free to use a handle to contribute anonymously): </label>
-            <%= img_fields.text_field :your_name, class: "form-control", placeholder: 'A Secret Admirer'%>
+            <%= img_fields.text_field :uploaded_by, class: "form-control", placeholder: 'A Secret Admirer'%>
           <% end %>
         </div>
         <div class="modal-footer form-inline">

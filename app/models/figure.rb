@@ -6,6 +6,7 @@ class Figure < ActiveRecord::Base
   has_many :votes, class_name: 'Vote', dependent: :destroy
   
   accepts_nested_attributes_for :images, :allow_destroy => true
+  accepts_nested_attributes_for :figure_category, :allow_destroy => false
   
   def rand_image
     rand_pos = rand(images.count)

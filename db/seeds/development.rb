@@ -534,10 +534,14 @@ figure_list = [
 ]
 
 figures = figure_list.map do |name, category, image_attrs, description=""|
-  
-  Figure.create!(name: name, 
-                figure_category: FigureCategory.find_by(name: category), 
-                images_attributes: [image_attrs], 
-                description: description
-                )
+  figure = Figure.find_or_initialize_by(
+    name: name, 
+    figure_category: FigureCategory.find_by(name: category), 
+    description: description,
+  )
+
+  figure_image = figure.images.build(image_attrs) unless figure_image && figure_image.id
+
+  figure.save!
+  figure_image.save! if figure && figure_image
 end
