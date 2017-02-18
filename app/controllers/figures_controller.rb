@@ -18,8 +18,9 @@ class FiguresController < ApplicationController
   def create
     @figure = Figure.find_or_initialize_by(figure_params)
 
-    unless image_real?
-      flash[:error] = "Please provide a valid image URL!"
+    img_error = image_errors
+    if img_error
+      flash[:error] = img_error
       redirect_to '/random'
       return
     end
@@ -42,14 +43,27 @@ class FiguresController < ApplicationController
   
   private
 
-  def image_real?
+  def image_errors
     img_url = image_params[:url]
     begin
-      img = Mechanize.new.get(img_url)[:body]
+      img = Mechanize.new.get(img_url)
     rescue => e
-      return false if e
+      return FigureImage.default_error_message if e
     end
-    img.is_a?(Mechanize::Image)
+
+    return FigureImage.default_error_message unless img.is_a?(Mechanize::Image)
+
+    begin
+      # try to access height and width
+      return FigureImage.dimension_error_message if img && img.height < 600 && img.width < 800
+      return FigureImage.height_error_message if img && img.height < 600
+      return FigureImage.width_error_message if img && img.width < 800
+    rescue => e
+      # if DNE do nothing
+    end
+
+    # no errors found
+    nil
   end
 
   def figure_params
