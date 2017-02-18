@@ -39,6 +39,7 @@ P3:
 
 P4:
 * Material design flow outward click effect :)
+* No hover box outline on click of mbti-button
     
 
 FIGURES TABLE

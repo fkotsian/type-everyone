@@ -16,52 +16,58 @@ class FiguresController < ApplicationController
   end
 
   def create
-    p "PARAMS"
-    pp params
     @figure = Figure.find_or_initialize_by(figure_params)
 
-    # find figure image or match to existing
-    fig_image = @figure.figure_images.find_or_initialize_by(image_params)
+    unless image_real?
+      flash[:error] = "Please provide a valid image URL!"
+      redirect_to '/random'
+      return
+    end
 
-    fig_cat_id = category_params[:id]
-    @figure.figure_category_id = fig_cat_id if @figure && fig_cat_id
+    fig_image = @figure.images.build(image_params)
+    @figure.figure_category_id = category_params
 
-    fail
     if @figure.save
       fig_image.save! if fig_image
-
       flash[:success] = "Thanks for adding!"
-      redirect_to 'figures#new'
     else
       flash[:error] = @figure.errors.full_messages.first.to_s
-      render :new
     end
+
+    redirect_to '/random'
   end
 
   def show
   end
   
   private
+
+  def image_real?
+    img_url = image_params[:url]
+    begin
+      img = Mechanize.new.get(img_url)[:body]
+    rescue => e
+      return false if e
+    end
+    img.is_a?(Mechanize::Image)
+  end
+
   def figure_params
     params.require(:figure).permit(
       :name,
       :description,
-      :figure_images => :url,
-      :figure_images => :uploaded_by,
       :figure_category => :id
     )
   end
 
   def image_params
-    figure_params.require(:figure_images).permit(
+    params.require(:figure).require(:figure_images).permit(
       :url,
       :uploaded_by
     )
   end
 
   def category_params
-    figure_params.require(:figure_category).permit(
-      :id
-    )
+    params.require(:figure).require(:figure_category)
   end
 end

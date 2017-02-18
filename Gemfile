@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'annotate'
 gem 'autoprefixer-rails'
 gem 'haml'
+gem 'mechanize'
 
 group :development do
   gem 'pry-rails'
