@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get '/type',  to: 'game#type'
   post '/votes', to: 'votes#create'
   
-  root to: 'static_pages#home'
+  root to: 'game#type'
 end
