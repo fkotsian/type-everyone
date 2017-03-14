@@ -3,12 +3,6 @@ class FiguresController < ApplicationController
     @figures = Figure.all
   end
   
-  def custom
-    @category = FigureCategory.find_by name: params[:category]
-    @figures = Figure.where(figure_category: @category.id)
-    render :index
-  end
-
   def new
     @figure = Figure.new
     @figure.images.build
