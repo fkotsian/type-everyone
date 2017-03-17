@@ -15,7 +15,7 @@ class FiguresController < ApplicationController
     img_error = image_errors
     if img_error
       flash[:error] = img_error
-      redirect_to '/random'
+      redirect_to '/play'
       return
     end
 
@@ -29,7 +29,7 @@ class FiguresController < ApplicationController
       flash[:error] = @figure.errors.full_messages.first.to_s
     end
 
-    redirect_to '/random'
+    redirect_to '/play'
   end
 
   def show
