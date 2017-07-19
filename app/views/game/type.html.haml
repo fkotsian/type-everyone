@@ -31,44 +31,44 @@
                     %h4.play-buttons-title SENTINELS
                 .row
                   .col-md-3
-                    = f.submit("ENFP", class: 'btn material-btn mbti-btn btn-lg', id: 'enfp-btn')
                     = f.submit("ENFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'enfj-btn')
+                    = f.submit("ENFP", class: 'btn material-btn mbti-btn btn-lg', id: 'enfp-btn')
 
                   .col-md-3
-                    = f.submit("INTP", class: 'btn material-btn mbti-btn btn-lg', id: 'intp-btn')
-                    = f.submit("INTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'intj-btn')
+                    = f.submit("ENTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'entj-btn')
+                    = f.submit("ENTP", class: 'btn material-btn mbti-btn btn-lg', id: 'entp-btn')
 
                   .col-md-3
                     = f.submit("ESTP", class: 'btn material-btn mbti-btn btn-lg', id: 'estp-btn')
                     = f.submit("ESFP", class: 'btn material-btn mbti-btn btn-lg', id: 'esfp-btn')
 
                   .col-md-3
-                    = f.submit("ISFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'isfj-btn')
-                    = f.submit("ISTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'istj-btn')
-                    
+                    = f.submit("ESTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'estj-btn')
+                    = f.submit("ESFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'esfj-btn')
+
                 .row
                   .col-md-3
-                    = f.submit("INFP", class: 'btn material-btn mbti-btn btn-lg', id: 'infp-btn')
                     = f.submit("INFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'infj-btn')
+                    = f.submit("INFP", class: 'btn material-btn mbti-btn btn-lg', id: 'infp-btn')
 
                   .col-md-3
-                    = f.submit("ENTP", class: 'btn material-btn mbti-btn btn-lg', id: 'entp-btn')
-                    = f.submit("ENTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'entj-btn')
+                    = f.submit("INTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'intj-btn')
+                    = f.submit("INTP", class: 'btn material-btn mbti-btn btn-lg', id: 'intp-btn')
 
                   .col-md-3
                     = f.submit("ISTP", class: 'btn material-btn mbti-btn btn-lg', id: 'istp-btn')
                     = f.submit("ISFP", class: 'btn material-btn mbti-btn btn-lg', id: 'isfp-btn')
 
                   .col-md-3
-                    = f.submit("ESFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'esfj-btn')
-                    = f.submit("ESTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'estj-btn')
-                
+                    = f.submit("ISTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'istj-btn')
+                    = f.submit("ISFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'isfj-btn')
+
             .col-md-1
               #next-button-holder
-                %a{href: '/type', class: 'btn btn-lg', id: 'next-button'} 
+                %a{href: '/type', class: 'btn btn-lg', id: 'next-button'}
                   %i.fa.fa-chevron-circle-right.fa-3x#next-button-arrow
-                                                               
-          
+
+
 :javascript
   $(function() {
     $('#slideout-menu-area').trigger('mouseover');
