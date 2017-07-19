@@ -2,7 +2,7 @@ class FiguresController < ApplicationController
   def index
     @figures = Figure.all
   end
-  
+
   def new
     @figure = Figure.new
     @figure.images.build
@@ -34,7 +34,7 @@ class FiguresController < ApplicationController
 
   def show
   end
-  
+
   private
 
   def image_errors
