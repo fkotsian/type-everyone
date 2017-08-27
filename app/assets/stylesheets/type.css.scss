@@ -56,6 +56,17 @@
 
 #play-buttons {}
 
+/* TOOLTIP */
+#voted-tooltip {
+  display: none;
+  position: fixed;
+  font-size: 36px;
+}
+
+#voted-tooltip:after {
+  content: '+1!';
+}
+
 /* SLIDEOUT MENU */
 
 #slideout-menu-area {
@@ -64,7 +75,7 @@
   width: 100%;
   top: 60%;
   bottom: 0%;
-  
+
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;  

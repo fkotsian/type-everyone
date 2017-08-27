@@ -14,6 +14,6 @@ class VotesController < ApplicationController
   end
 
   def vote_type
-    VoteType.find_by(name: params["commit"].downcase)
+    VoteType.find_by(name: params["type"].downcase)
   end
 end

@@ -17,7 +17,7 @@
         #play-buttons.text-center
           .row
             .col-md-11
-              = form_for(@vote) do |f|
+              = form_for(@vote, html: { id: 'vote-form', remote: true }) do |f|
                 = f.hidden_field(:figure_id)
 
                 .row
@@ -31,37 +31,46 @@
                     %h4.play-buttons-title SENTINELS
                 .row
                   .col-md-3
-                    = f.submit("ENFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'enfj-btn')
-                    = f.submit("ENFP", class: 'btn material-btn mbti-btn btn-lg', id: 'enfp-btn')
+                    = f.submit("ENFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'enfj-btn', name: 'type')
+                    = f.submit("ENFP", class: 'btn material-btn mbti-btn btn-lg', id: 'enfp-btn', name: 'type')
 
                   .col-md-3
-                    = f.submit("ENTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'entj-btn')
-                    = f.submit("ENTP", class: 'btn material-btn mbti-btn btn-lg', id: 'entp-btn')
+                    = f.submit("ENTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'entj-btn', name: 'type')
+                    = f.submit("ENTP", class: 'btn material-btn mbti-btn btn-lg', id: 'entp-btn', name: 'type')
 
                   .col-md-3
-                    = f.submit("ESTP", class: 'btn material-btn mbti-btn btn-lg', id: 'estp-btn')
-                    = f.submit("ESFP", class: 'btn material-btn mbti-btn btn-lg', id: 'esfp-btn')
+                    = f.submit("ESTP", class: 'btn material-btn mbti-btn btn-lg', id: 'estp-btn', name: 'type')
+                    = f.submit("ESFP", class: 'btn material-btn mbti-btn btn-lg', id: 'esfp-btn', name: 'type')
 
                   .col-md-3
-                    = f.submit("ESTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'estj-btn')
-                    = f.submit("ESFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'esfj-btn')
+                    = f.submit("ESTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'estj-btn', name: 'type')
+                    = f.submit("ESFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'esfj-btn', name: 'type')
 
                 .row
                   .col-md-3
-                    = f.submit("INFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'infj-btn')
-                    = f.submit("INFP", class: 'btn material-btn mbti-btn btn-lg', id: 'infp-btn')
+                    = f.submit("INFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'infj-btn', name: 'type')
+                    = f.submit("INFP", class: 'btn material-btn mbti-btn btn-lg', id: 'infp-btn', name: 'type')
 
                   .col-md-3
-                    = f.submit("INTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'intj-btn')
-                    = f.submit("INTP", class: 'btn material-btn mbti-btn btn-lg', id: 'intp-btn')
+                    = f.submit("INTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'intj-btn', name: 'type')
+                    = f.submit("INTP", class: 'btn material-btn mbti-btn btn-lg', id: 'intp-btn', name: 'type')
 
                   .col-md-3
-                    = f.submit("ISTP", class: 'btn material-btn mbti-btn btn-lg', id: 'istp-btn')
-                    = f.submit("ISFP", class: 'btn material-btn mbti-btn btn-lg', id: 'isfp-btn')
+                    = f.submit("ISTP", class: 'btn material-btn mbti-btn btn-lg', id: 'istp-btn', name: 'type')
+                    = f.submit("ISFP", class: 'btn material-btn mbti-btn btn-lg', id: 'isfp-btn', name: 'type')
 
                   .col-md-3
-                    = f.submit("ISTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'istj-btn')
-                    = f.submit("ISFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'isfj-btn')
+                    = f.submit("ISTJ", class: 'btn material-btn mbti-btn btn-lg', id: 'istj-btn', name: 'type')
+                    = f.submit("ISFJ", class: 'btn material-btn mbti-btn btn-lg', id: 'isfj-btn', name: 'type')
+
+            %svg#voted-tooltip
+              %rect{width: 100, height: 100, rx:10, ry:10, style: 'fill:#0cf074; stroke-width:3,stroke:#d3d3d3'}
+              %text{x: 25, y: 63, textAnchor: 'middle', alignmentBaseline: 'center', fill: 'white'}
+                %tspan
+                  +1!
+              %polygon{points: '35,100 65,100 50,117', style: 'fill:#0cf074;stroke-width:3,stroke:#d3d3d3'}
+
+
 
             .col-md-1
               #next-button-holder
@@ -71,9 +80,39 @@
 
 :javascript
   $(function() {
+    $('.mbti-btn').click(function(e) {
+      var pos = $(e.target).offset();
+      var posX = pos.left - 10;
+      // less the height of the button
+      var posY = pos.top - 100;
+
+      $('#voted-tooltip').css({
+        'top': posY,
+        'left': posX,
+        'display': 'inline-block',
+      });
+
+      $('#voted-tooltip').animate(
+        {
+          'top': posY - 400,
+        },
+        {
+          duration: 4500,
+          easing: 'linear',
+        }
+      );
+
+      $('#voted-tooltip').fadeOut({
+        queue: false,
+        duration: 1000,
+        easing: 'linear',
+      });
+    });
+  });
+
+  $(function() {
     $('#slideout-menu-area').trigger('mouseover');
   });
-  console.log("Doing the JS thing");
   BackgroundCheck.init({
     targets: '.mbti-btn, #figure-name, #figure-description, #slideout-menu',
     images: '#play-container'
