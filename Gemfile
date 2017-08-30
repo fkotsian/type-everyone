@@ -33,4 +33,5 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'capybara-screenshot'
   gem 'launchy'
+  gem 'rb-readline'
 end
