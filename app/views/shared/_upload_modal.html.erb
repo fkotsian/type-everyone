@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Suggest a Figure!</h4>
+        <h4 class="modal-title" id="myModalLabel">Describe Your Figure!</h4>
       </div>
       <%= form_for Figure.new, action: '/figures', method: 'POST' do |f| %>
         <div class="form-group" id="figure-properties">
@@ -32,8 +32,10 @@
               <br>
               Google Images is a good resource.
             </div>
+
             <label for="figure_figure_images_url" class="figure-attr-label">Image URL: </label>
-            <%= img_fields.text_field :url, class: "form-control", placeholder: 'https://en.wikipedia.org/wiki/Ben_Franklin_800_600.jpg'%>
+            <%= img_fields.text_field :url, class: "form-control", placeholder: 'https://en.wikipedia.org/wiki/Ben_Franklin_800_600.jpg', id: 'upload-figure-url' %>
+
             <label for="figure_figure_images_uploaded_by" class="figure-attr-label">Your Name (for credit, feel free to use a handle to contribute anonymously): </label>
             <%= img_fields.text_field :uploaded_by, class: "form-control", placeholder: 'A Secret Admirer'%>
           <% end %>

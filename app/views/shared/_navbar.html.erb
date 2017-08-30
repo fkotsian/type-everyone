@@ -30,7 +30,7 @@
               </ul>
             </li>
             <li>
-              <a href="#" id="suggest-btn" data-toggle="modal" data-target='#upload-modal'>
+              <a ="" id="suggest-btn" onclick="showPicker()">
                 Contribute
               </a>
             </li>
@@ -39,9 +39,47 @@
                 Feedback
               </a>
             </li>
+            <li>
+              <input type="button" value="Upload" onclick="showPicker()" />
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
   </div>
 </div>
+
+<script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+  // Show the 'Describe' modal;
+  // Shown on upload completion
+  function showModal(file) {
+    console.log(file)
+    $('#upload-modal').modal('show');
+    $('#upload-figure-url').val(file.url);
+  }
+
+  var client = filestack.init('ALSo039uBTDuV05oiengbz');
+  function showPicker() {
+    client.pick({
+      accept: 'image/*',
+      fromSources: ['local_file_system','url','imagesearch'],
+      maxFiles: 1,
+      minFiles: 1,
+      imageMin: [800,600],
+      hideWhenUploading: false,
+      uploadInBackground: true,
+      transformations: {
+        circle: false,
+        rotate: true,
+        crop: {
+          aspectRatio: 16/10,
+          force: true,
+        },
+      },
+      onFileUploadFinished: showModal
+    }).then(function(result) {
+      console.log(JSON.stringify(result.filesUploaded))
+    });
+  }
+</script>
