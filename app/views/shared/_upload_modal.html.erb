@@ -15,9 +15,9 @@
         <div class="form-group">
           <label for="figure_figure_category_name">Category: </label>
           <%= f.collection_select(
-            :figure_category, 
-            FigureCategory.all, 
-            :id, 
+            :figure_category,
+            FigureCategory.all,
+            :id,
             :display_name,
             {},
             class: "form-control")
@@ -51,3 +51,4 @@
     </div>
   </div>
 </div>
+
