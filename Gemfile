@@ -20,6 +20,8 @@ gem 'mechanize'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 3.6.0'
 
+gem 'webpacker', '~> 3.0'
+
 # react
 gem 'react_on_rails', '10.0.2' # prefer exact gem version to match npm version
 
