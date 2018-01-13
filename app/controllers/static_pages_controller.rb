@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
-  def home
+  def landing
   end
-  
+
   def game
   end
 end

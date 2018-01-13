@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {connect} from 'react-redux'
+import {Link, Route, withRouter} from 'react-router-dom'
 //import Navbar from 'containers/Navbar'
-//import Game from 'containers/Game'
+import Landing from 'containers/Landing'
+import Game from 'containers/Game'
 
 class App extends Component {
   constructor(props) {
@@ -12,13 +14,16 @@ class App extends Component {
   render() {
     return (
       <div className="root">
-
+        <Route exact path="/" component={Landing} />
+        <Route path="/play" component={Game} />
       </div>
     )
   }
 }
 
-export default connect(
-  null,
-  null,
-)(App)
+export default withRouter(
+  connect(
+    null,
+    null,
+  )(App)
+)
