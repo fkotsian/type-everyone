@@ -17,6 +17,9 @@ gem 'autoprefixer-rails'
 gem 'haml'
 gem 'mechanize'
 
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 3.6.0'
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'

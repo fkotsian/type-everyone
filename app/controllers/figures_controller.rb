@@ -49,11 +49,19 @@ class FiguresController < ApplicationController
 
     begin
       # try to access height and width
+      p "*" * 100
+      p img
+      p img.height
+      p img.width
+      p "*" * 100
       return FigureImage.dimension_error_message if img && img.height < 600 && img.width < 800
       return FigureImage.height_error_message if img && img.height < 600
       return FigureImage.width_error_message if img && img.width < 800
     rescue => e
       # if DNE do nothing
+      p "ERROR" + "*" * 100
+      p e
+      p "*" * 100
     end
 
     # no errors found
@@ -71,7 +79,8 @@ class FiguresController < ApplicationController
   def image_params
     params.require(:figure).require(:figure_images).permit(
       :url,
-      :uploaded_by
+      :uploaded_by,
+      :uploaded,
     )
   end
 
