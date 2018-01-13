@@ -21,7 +21,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 3.6.0'
 
 # react
-#gem 'react_on_rails', '10.0.2' # prefer exact gem version to match npm version
+gem 'react_on_rails', '10.0.2' # prefer exact gem version to match npm version
 
 group :development do
   gem 'pry-rails'
