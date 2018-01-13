@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'hello_world', to: 'hello_world#index'
   resources :figures,       only: %w[index new create show]
   resources :figure_images, only: %w[index new create show]
 

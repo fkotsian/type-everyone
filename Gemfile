@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.1.0'
 gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -37,3 +37,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rb-readline'
 end
+
+gem 'mini_racer', platforms: :ruby
