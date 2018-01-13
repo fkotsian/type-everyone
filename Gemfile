@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.2'
+gem 'rails', '~> 5.0.0'
 gem 'sqlite3'
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
@@ -20,6 +20,9 @@ gem 'mechanize'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 3.6.0'
 
+# react
+#gem 'react_on_rails', '10.0.2' # prefer exact gem version to match npm version
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'
@@ -32,9 +35,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'capybara'
-  gem 'capybara-webkit'
-  gem 'capybara-screenshot'
-  gem 'launchy'
   gem 'rb-readline'
 end
