@@ -7,4 +7,23 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+
+// global webpack req
+import 'babel-polyfill';
+
+import ReactOnRails from 'react-on-rails';
+import Root from '../containers/Root';
+
+ReactOnRails.register({
+  Root,
+});
+
+import store from '../store.js';
+
+ReactOnRails.registerStore({
+  store,
+});
+
+import axios from 'axios';
+axios.defaults.headers.common['X-CSRF-TOKEN'] = ReactOnRails.authenticityToken();
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
