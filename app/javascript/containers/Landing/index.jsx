@@ -16,8 +16,6 @@ class Landing extends Component {
           </div>
         </Link>
 
-        <Game />
-
       </div>
     )
   }

@@ -1,6 +1,9 @@
 class FiguresController < ApplicationController
+  respond_to :html, :json
+
   def index
     @figures = Figure.all
+    respond_with(@figures)
   end
 
   def new

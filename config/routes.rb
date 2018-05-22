@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   #get '/play',  to: 'game#type', as: 'game'
   post '/votes', to: 'votes#create'
 
+  get '*all', to: 'static_pages#landing'
+
   root to: 'static_pages#landing'
 end

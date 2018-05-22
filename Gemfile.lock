@@ -207,6 +207,9 @@ GEM
       execjs (~> 2.5)
       rails (>= 3.2)
       rainbow (~> 2.2)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -299,6 +302,7 @@ DEPENDENCIES
   rb-fsevent
   rb-readline
   react_on_rails (= 10.0.2)
+  responders
   rspec-rails (~> 3.0)
   sass-rails
   sdoc (~> 0.4.0)

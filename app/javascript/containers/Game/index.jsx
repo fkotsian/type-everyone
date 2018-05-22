@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import {connect} from 'react-redux'
+import {
+  loadFigures
+} from '../../actions'
 
 const MBTI = {
   sentinels: [
@@ -33,6 +37,7 @@ class Game extends Component {
     super(props)
 
     this.state = {
+      figureIndex: 0,
       figures: [],
       currentFigure: {
         name: 'Mr T',
@@ -43,16 +48,27 @@ class Game extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.loadFigures()
+  }
+
+  componentWillReceiveProps(props) {
+    console.log("NEW PROPS!")
+    console.log(props)
+  }
+
   render() {
     console.log("GAME!")
-    console.log(this.state.currentFigure)
+    let figure = this.props.figures[this.state.figureIndex] || {}
+    console.log(figure)
+
     return (
       <div>
         Game!
         <div
           className="cover-photo"
           style={{
-            'backgroundImage': `url(${this.state.currentFigure.imageUrl})`,
+            'backgroundImage': `url(${figure.image})`,
             'backgroundSize': 'cover',
             'backgroundRepeat': 'no-repeat',
             'backgroundPosition': 'center',
@@ -62,8 +78,15 @@ class Game extends Component {
             'top': '0%',
             'bottom': '0px',
             width: '100%',
+            color: 'white',
           }}
         >
+          <h1>
+            { figure.name }
+          </h1>
+          <h2>
+            { figure.description }
+          </h2>
         </div>
 
         <div
@@ -75,9 +98,9 @@ class Game extends Component {
             'width': '100%',
 
             'display': 'flex',
-            'flex-flow': 'row wrap',
-            'justify-content': 'space-around',
-            'align-items': 'center',
+            'flexFlow': 'row wrap',
+            'justifyContent': 'space-around',
+            'alignItems': 'center',
           }}
         >
           {
@@ -85,11 +108,15 @@ class Game extends Component {
               <div
                 style={{
                   'display': 'flex',
-                  'flex-flow': 'row wrap',
+                  'flexFlow': 'row wrap',
                   'width': '20%',
                 }}
               >
-                <div>
+                <div
+                  style={{
+                    color: 'white',
+                  }}
+                >
                   {grp}
                 </div>
                 <div>
@@ -115,4 +142,21 @@ class Game extends Component {
   }
 }
 
-export default Game
+const mapStateToProps = (state) => {
+  return {
+    figures: state.figures.items,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loadFigures: () => dispatch(loadFigures()),
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(
+  Game
+)

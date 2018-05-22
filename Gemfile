@@ -16,10 +16,13 @@ gem 'annotate'
 gem 'autoprefixer-rails'
 gem 'haml'
 gem 'mechanize'
+gem 'responders'
 
+# images
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 3.6.0'
 
+# javascript
 gem 'webpacker', '~> 3.0'
 
 # react
