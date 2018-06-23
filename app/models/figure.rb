@@ -1,15 +1,21 @@
 class Figure < ActiveRecord::Base
+  enum figure_category_id: {
+    musicians_and_artists:                          1,
+    celebrities_actors_and_athletes:                2,
+    politicians_scientists_and_historical_figures:  3,
+    tv_movie_and_fictional_characters:              4,
+  }
+  alias_attribute :category, :figure_category_id
+
   validates :name, presence: true, uniqueness: true
 
   belongs_to :mythos, optional: true
-  belongs_to :figure_category
   has_many :images, class_name: 'FigureImage', dependent: :destroy
   has_many :votes, class_name: 'Vote', dependent: :destroy
 
   scope :from_category, -> (category_id) { where(figure_category_id: category_id) }
 
   accepts_nested_attributes_for :images, :allow_destroy => true
-  accepts_nested_attributes_for :figure_category, :allow_destroy => false
 
   def rand_image
     rand_pos = rand(images.count)
@@ -48,5 +54,9 @@ class Figure < ActiveRecord::Base
       rand_row = rand(count)
       Figure.offset(rand_row).first
     end
+  end
+
+  def self.categories
+    self.figure_category_ids
   end
 end

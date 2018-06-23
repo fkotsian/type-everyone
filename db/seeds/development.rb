@@ -1,14 +1,3 @@
-figure_category_list = [
-  :musicians_and_artists,
-  :celebrities_actors_and_athletes,
-  :politicians_scientists_and_historical_figures, 
-  :tv_movie_and_fictional_characters
-]
-
-figure_categories = figure_category_list.map do |category_name|
-  FigureCategory.create(name: category_name)
-end
-
 vote_type_list = [
   :isfp,
   :isfj,
@@ -34,8 +23,9 @@ end
 
 figure_list = [
   #name, category, image, description
-  ['Benjamin Franklin', 
-    :politicians_scientists_and_historical_figures, 
+  [
+    'Benjamin Franklin',
+    Figure.figure_category_ids[:politicians_scientists_and_historical_figures],
     {url: 'benjamin_franklin.jpg'},
     'Founding Father, Inventor, Statesman'
   ],
@@ -43,8 +33,8 @@ figure_list = [
 
 figures = figure_list.map do |name, category, image_attrs, description=""|
   figure = Figure.find_or_initialize_by(
-    name: name, 
-    figure_category: FigureCategory.find_by(name: category), 
+    name: name,
+    figure_category_id: category,
     description: description,
   )
 

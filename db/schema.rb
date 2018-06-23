@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180623005602) do
+ActiveRecord::Schema.define(version: 20180623034423) do
 
   create_table "figure_categories", force: :cascade do |t|
     t.string "name", null: false
@@ -38,13 +38,13 @@ ActiveRecord::Schema.define(version: 20180623005602) do
     t.datetime "updated_at"
     t.integer "figure_category_id"
     t.string "description"
-    t.integer "mythoses_id"
+    t.integer "mythos_id"
     t.index ["figure_category_id"], name: "index_figures_on_figure_category_id"
-    t.index ["mythoses_id"], name: "index_figures_on_mythoses_id"
+    t.index ["mythos_id"], name: "index_figures_on_mythos_id"
     t.index ["name"], name: "index_figures_on_name", unique: true
   end
 
-  create_table "mythos", force: :cascade do |t|
+  create_table "mythoi", force: :cascade do |t|
     t.string "name"
     t.integer "category"
     t.datetime "created_at", null: false

@@ -1,6 +1,6 @@
-class CreateMythos < ActiveRecord::Migration[5.1]
+class CreateMythoi < ActiveRecord::Migration[5.1]
   def change
-    create_table :mythos do |t|
+    create_table :mythoi do |t|
       t.string :name
       t.integer :category
 
