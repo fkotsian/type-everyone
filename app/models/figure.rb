@@ -1,6 +1,7 @@
 class Figure < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
 
+  belongs_to :mythos, optional: true
   belongs_to :figure_category
   has_many :images, class_name: 'FigureImage', dependent: :destroy
   has_many :votes, class_name: 'Vote', dependent: :destroy

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,57 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830022518) do
+ActiveRecord::Schema.define(version: 20180623005602) do
 
-  create_table "figure_categories", force: true do |t|
-    t.string   "name",       null: false
+  create_table "figure_categories", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["name"], name: "index_figure_categories_on_name", unique: true
   end
 
-  add_index "figure_categories", ["name"], name: "index_figure_categories_on_name", unique: true
-
-  create_table "figure_images", force: true do |t|
-    t.string   "url",         null: false
-    t.string   "size"
+  create_table "figure_images", force: :cascade do |t|
+    t.string "url", null: false
+    t.string "size"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "figure_id"
-    t.string   "uploaded_by"
-    t.string   "uploaded"
+    t.integer "figure_id"
+    t.string "uploaded_by"
+    t.string "uploaded"
+    t.index ["figure_id"], name: "index_figure_images_on_figure_id", unique: true
+    t.index ["size"], name: "index_figure_images_on_size"
+    t.index ["url"], name: "index_figure_images_on_url", unique: true
   end
 
-  add_index "figure_images", ["figure_id"], name: "index_figure_images_on_figure_id", unique: true
-  add_index "figure_images", ["size"], name: "index_figure_images_on_size"
-  add_index "figure_images", ["url"], name: "index_figure_images_on_url", unique: true
-
-  create_table "figures", force: true do |t|
-    t.string   "name",               null: false
+  create_table "figures", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "figure_category_id"
-    t.string   "description"
+    t.integer "figure_category_id"
+    t.string "description"
+    t.integer "mythoses_id"
+    t.index ["figure_category_id"], name: "index_figures_on_figure_category_id"
+    t.index ["mythoses_id"], name: "index_figures_on_mythoses_id"
+    t.index ["name"], name: "index_figures_on_name", unique: true
   end
 
-  add_index "figures", ["figure_category_id"], name: "index_figures_on_figure_category_id"
-  add_index "figures", ["name"], name: "index_figures_on_name", unique: true
+  create_table "mythos", force: :cascade do |t|
+    t.string "name"
+    t.integer "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-  create_table "vote_types", force: true do |t|
-    t.string   "name",       null: false
+  create_table "vote_types", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["name"], name: "index_vote_types_on_name", unique: true
   end
 
-  add_index "vote_types", ["name"], name: "index_vote_types_on_name", unique: true
-
-  create_table "votes", force: true do |t|
-    t.integer  "vote_type_id"
+  create_table "votes", force: :cascade do |t|
+    t.integer "vote_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "figure_id"
+    t.integer "figure_id"
+    t.index ["figure_id"], name: "index_votes_on_figure_id"
+    t.index ["vote_type_id"], name: "index_votes_on_vote_type_id"
   end
-
-  add_index "votes", ["figure_id"], name: "index_votes_on_figure_id"
-  add_index "votes", ["vote_type_id"], name: "index_votes_on_vote_type_id"
 
 end
