@@ -894,6 +894,10 @@ babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
 
+"background-check@https://github.com/kennethcachia/background-check":
+  version "1.2.2"
+  resolved "https://github.com/kennethcachia/background-check#f52e3f8116dca46f95ce0da548d1458f22eec7f1"
+
 balanced-match@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.1.0.tgz#b504bd05869b39259dd0c5efc35d843176dccc4a"

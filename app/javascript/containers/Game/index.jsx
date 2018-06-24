@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {
   loadFigures
 } from '../../actions'
+import BackgroundCheck from 'background-check/background-check.min.js'
 import styles from './styles.module.scss'
 
 const MBTI = {
@@ -51,11 +52,22 @@ class Game extends Component {
 
   componentDidMount() {
     this.props.loadFigures()
+    this.initBackgroundCheck()
   }
-
   componentWillReceiveProps(props) {
     console.log("NEW PROPS!")
     console.log(props)
+  }
+  componentDidUpdate(){
+    console.log("REFRESHING!")
+    BackgroundCheck.refresh()
+  }
+
+  initBackgroundCheck() {
+    BackgroundCheck.init({
+      targets: '.mbti-btn, .figure-name, .figure-description, .slideout-menu',
+      images: '.game'
+    });
   }
 
   render() {
@@ -72,16 +84,23 @@ class Game extends Component {
           'backgroundPosition': 'center',
         }}
       >
-        Game!
+        <div className=".game-shade">
+        </div>
         <div
           className="cover-photo"
         >
-          <h1>
-            { figure.name }
-          </h1>
-          <h2>
-            { figure.description }
-          </h2>
+          <div className="figure">
+            <div className="figure-name">
+              <h1>
+                { figure.name }
+              </h1>
+            </div>
+            <div className="figure-description">
+              <h1>
+                { figure.description }
+              </h1>
+            </div>
+          </div>
         </div>
 
         <div
