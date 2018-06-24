@@ -14,8 +14,9 @@ export const loadFiguresSuccess = (figures) => {
 }
 export const loadFigures = () => {
   return (dispatch) => {
+    console.log("FETCHING FIGURES!")
      axios.get(
-       '/figures'
+       '/api/v1/figures'
      ).then(res => {
        console.log("FETCHED FIGURES!")
        console.log(res)
@@ -27,6 +28,9 @@ export const loadFigures = () => {
        return dispatch(
          loadFiguresSuccess(json)
        )
+     }).catch(err => {
+       console.log("ERROR LOADING FIGURES!")
+       console.log(err)
      })
   }
 }
