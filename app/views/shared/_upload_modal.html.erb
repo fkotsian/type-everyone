@@ -13,22 +13,25 @@
           <%= f.text_field :description, class: "form-control", placeholder: "Diplomat, Inventor, Guy Who Flew A Kite In A Lightning Storm", maxlength: 40 %>
         </div>
         <div class="form-group">
-          <label for="figure_figure_category_name">Category: </label>
-          <%= f.collection_select(
-            :figure_category,
-            FigureCategory.all,
-            :id,
-            :display_name,
-            {},
-            class: "form-control")
-          %>
+          <%= f.hidden_field :figure_category_id, value: :tv_movie_and_fictional_characters %>
         </div>
+
+        <%= f.fields_for :mythos do |mythos_fields| %>
+          <div class="form-group">
+            <%= mythos_fields.label :name, 'Where is this character from?' %>
+            <%= mythos_fields.select :category, Mythos.categories.map {|k,v| [k.humanize.capitalize, v]} %>
+          </div>
+          <div class="form-group">
+            <%= mythos_fields.label :name, 'Name of Movie, Show, or Book:' %>
+            <%= mythos_fields.text_field :name, class: 'form-control', placeholder: 'Game of Thrones', id: 'mythos-name' %>
+          </div>
+        <% end %>
         <div class="form-group">
           <%= f.fields_for :figure_images do |img_fields| %>
             <div class='image-warning'>
               Please Note:
               <br>
-              Images must be high-quality, 800x500 or greater to be considered.
+              Images must be high-quality, at least 1600 x 1200px or greater to be considered.
               <br>
               Google Images is a good resource.
             </div>
