@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {
   loadFigures
 } from '../../actions'
+import styles from './styles.module.scss'
 
 const MBTI = {
   sentinels: [
@@ -63,23 +64,17 @@ class Game extends Component {
     console.log(figure)
 
     return (
-      <div>
+      <div className="game"
+        style={{
+          'backgroundImage': `url(${figure.image})`,
+          'backgroundSize': 'cover',
+          'backgroundRepeat': 'no-repeat',
+          'backgroundPosition': 'center',
+        }}
+      >
         Game!
         <div
           className="cover-photo"
-          style={{
-            'backgroundImage': `url(${figure.image})`,
-            'backgroundSize': 'cover',
-            'backgroundRepeat': 'no-repeat',
-            'backgroundPosition': 'center',
-
-            'position': 'absolute',
-            'overflow': 'hidden',
-            'top': '0%',
-            'bottom': '0px',
-            width: '100%',
-            color: 'white',
-          }}
         >
           <h1>
             { figure.name }
