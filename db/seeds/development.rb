@@ -26,7 +26,7 @@ figure_list = [
   [
     'Benjamin Franklin',
     Figure.figure_category_ids[:politicians_scientists_and_historical_figures],
-    {url: 'benjamin_franklin.jpg'},
+    {url: 'http://www.mulierchile.com/benjamin-franklin-wallpaper/benjamin-franklin-wallpaper-004.jpg'},
     'Founding Father, Inventor, Statesman'
   ],
 ]
