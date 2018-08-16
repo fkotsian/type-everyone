@@ -1,8 +1,26 @@
 #TypeEverything
 
 PROGRESS:
-* Get nested form_for working
-* Have livereload and nearly complete form
+- have buttons styles
+- have uploader task
+- transitioned to React!
+
+NEED:
+- uploader (Mythos, figure name or new, desc if applicable, image URL, dropdown of category (default & for now is all 'fiction' at first))
+- click button submits vote
+- click button shows feedback of agree (either circle of X% agree or bar chart of %s/by type)
+- flag inapprop photos (1 flag hides photo and figure if only photo); shows it up in admin panel) - this photo is inappropriate/this photo is too small
+- give us feedback! box (also shows up in admin panel)
+
+FUTURE:
+- guess by attr (E/N/F/P, or by function (choose functions, then order them) -> choose N, Ni or Ne? -> choose 4, gives you 4 types, choose 1, shows feedback
+- submit more photos button
+- real people mythos ('US Politics' mythos, for example)
+- display clickable Mythoses (Home screen shows 4 random mythos, eventually shows 'Real' vs 'Fiction')
+- Mythoses can be created by users and :star:'d by other users for fun (ie US Presidents and US Politics, or Famous Democrats would all have Barack)
+
+BUGS:
+- CSS Modules still do not work
 
 REQUIREMENTS:
 * Uploader
