@@ -94,9 +94,19 @@
 
 /* MBTI and NEXT BUTTONS */
 
-.mbti-btn {
+.mbtiButton {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
   width: 5em;
   height: 3em;
+
+  background-color: #f900c2;
+  border-radius: 5px;
+  color: #fff;
 
   margin-top: .6em;
   margin-bottom: .6em;
@@ -110,6 +120,15 @@
   -webkit-transition: all 0.5s ease-out 0s;
   -moz-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;
+
+  &.sentinels {
+  }
+  &.artisans {
+  }
+  &.champions {
+  }
+  &.rationals {
+  }
 }
 
 .next-button-area {}

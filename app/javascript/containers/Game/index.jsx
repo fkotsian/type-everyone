@@ -9,28 +9,28 @@ import styles from './styles.module.scss'
 
 const MBTI = {
   sentinels: [
-    'ISFJ',
-    'ISTJ',
     'ESFJ',
+    'ISFJ',
     'ESTJ',
+    'ISTJ',
   ],
   artisans: [
-    'ISTP',
+    'ESFP',
     'ISFP',
     'ESTP',
-    'ESFP',
+    'ISTP',
   ],
   champions: [
-    'INFP',
-    'INFJ',
     'ENFP',
+    'INFP',
     'ENFJ',
+    'INFJ',
   ],
   rationals: [
-    'INTP',
-    'INTJ',
     'ENTP',
+    'INTP',
     'ENTJ',
+    'INTJ',
   ],
 }
 
@@ -74,6 +74,8 @@ class Game extends Component {
     console.log("GAME!")
     let figure = this.props.figures[this.state.figureIndex] || {}
     console.log(figure)
+    console.log("STYLES")
+    console.log(styles)
 
     return (
       <div className="game"
@@ -84,7 +86,7 @@ class Game extends Component {
           'backgroundPosition': 'center',
         }}
       >
-        <div className=".game-shade">
+        <div className="game-shade">
         </div>
         <div
           className="cover-photo"
@@ -108,12 +110,12 @@ class Game extends Component {
           style={{
             'zIndex': 10,
             'position': 'absolute',
-            'top': '80%',
+            'top': '65vh',
             'width': '100%',
 
             'display': 'flex',
             'flexFlow': 'row wrap',
-            'justifyContent': 'space-around',
+            'justifyContent': 'center',
             'alignItems': 'center',
           }}
         >
@@ -123,29 +125,48 @@ class Game extends Component {
                 style={{
                   'display': 'flex',
                   'flexFlow': 'row wrap',
-                  'width': '20%',
+                  'justifyContent': 'center',
+                  'alignItems': 'center',
+                  width: '100%',
                 }}
               >
                 <div
                   style={{
-                    color: 'white',
+                    width: '60%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
                   }}
                 >
-                  {grp}
-                </div>
-                <div>
-                  {
-                    MBTI[grp].map(type => (
-                      <button
-                        style={{
-                          'display': 'flex',
-                          'flex': 1,
-                        }}
-                      >
-                        {type}
-                      </button>
-                    ))
-                  }
+                  <div
+                    style={{
+                      color: 'white',
+                      width: '10%',
+                    }}
+                  >
+                    {grp.toUpperCase()}
+                  </div>
+                  <div
+                    style={{
+                      'display': 'flex',
+                      'flexFlow': 'row nowrap',
+                      'justifyContent': 'center',
+                      'alignItems': 'center',
+                      'width': '40%',
+                    }}
+                  >
+                    {
+                      MBTI[grp].map(type => (
+                        <button
+                          className={`mbtiButton ${grp}`}
+                          style={{
+                          }}
+                        >
+                          {type}
+                        </button>
+                      ))
+                    }
+                  </div>
                 </div>
               </div>
             ))
