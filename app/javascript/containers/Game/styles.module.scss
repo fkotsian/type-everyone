@@ -103,6 +103,7 @@
 
   width: 5em;
   height: 3em;
+  flex: 1;
 
   background-color: #f900c2;
   border-radius: 5px;
@@ -128,6 +129,12 @@
   &.champions {
   }
   &.rationals {
+  }
+
+  &:hover {
+    background-color: #2900c2;
+    height: 4em;
+    flex: 2;
   }
 }
 
