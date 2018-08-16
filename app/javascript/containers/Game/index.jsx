@@ -110,7 +110,7 @@ class Game extends Component {
           style={{
             'zIndex': 10,
             'position': 'absolute',
-            'top': '65vh',
+            'top': '75vh',
             'width': '100%',
 
             'display': 'flex',
@@ -123,50 +123,47 @@ class Game extends Component {
             Object.keys(MBTI).map(grp => (
               <div
                 style={{
-                  'display': 'flex',
-                  'flexFlow': 'row wrap',
-                  'justifyContent': 'center',
-                  'alignItems': 'center',
-                  width: '100%',
+                  width: '25%',
+                  display: 'flex',
+                  flexFlow: 'column nowrap',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  margin: '0 auto',
                 }}
               >
                 <div
                   style={{
-                    width: '60%',
+                    color: 'white',
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                    width: '100%',
+                    margin: '0 auto',
                   }}
                 >
-                  <div
-                    style={{
-                      color: 'white',
-                      width: '10%',
-                    }}
-                  >
-                    {grp.toUpperCase()}
-                  </div>
-                  <div
-                    style={{
-                      'display': 'flex',
-                      'flexFlow': 'row nowrap',
-                      'justifyContent': 'center',
-                      'alignItems': 'center',
-                      'width': '40%',
-                    }}
-                  >
-                    {
-                      MBTI[grp].map(type => (
-                        <button
-                          className={`mbtiButton ${grp}`}
-                          style={{
-                          }}
-                        >
-                          {type}
-                        </button>
-                      ))
-                    }
-                  </div>
+                  {grp.toUpperCase()}
+                </div>
+                <div
+                  style={{
+                    'display': 'flex',
+                    'flexFlow': 'row wrap',
+                    'justifyContent': 'center',
+                    'alignItems': 'center',
+
+                    width: '50%',
+                    margin: '0 auto',
+                  }}
+                >
+                  {
+                    MBTI[grp].map(type => (
+                      <button
+                        className={`mbtiButton ${grp}`}
+                        style={{
+                        }}
+                      >
+                        {type}
+                      </button>
+                    ))
+                  }
                 </div>
               </div>
             ))
