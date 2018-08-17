@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :figures,       only: %w[index new create show]
       resources :figure_images, only: %w[index new create show]
+      resources :mythoi,        only: %w[index show]
       #get '/play',  to: 'game#type', as: 'game'
       post '/votes', to: 'votes#create'
     end

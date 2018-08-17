@@ -35,4 +35,34 @@ export const loadFigures = () => {
   }
 }
 
+export const LOAD_MYTHOI = 'LOAD_MYTHOI'
+export const loadMythoiSuccess = mythoi => {
+  return {
+    type: LOAD_MYTHOI,
+    payload: {
+      items: mythoi,
+    }
+  }
+}
+export const loadMythoi = mythoi => {
+  return dispatch => {
+    console.log("FETCHING MYTHOI!")
+    axios.get(
+      '/api/v1/mythoi'
+    ).then(res => {
+      console.log("SUCCESS LOADING MYTHOI!")
+      console.log(res)
+      return res
+    }).then(res => {
+      return res.data
+    }).then(json => {
+      return dispatch(
+        loadMythoiSuccess(json)
+      )
+    }).catch(err => {
+      console.log("ERROR LOADING MYTHOI!")
+      console.log(err)
+    })
+  }
+}
 

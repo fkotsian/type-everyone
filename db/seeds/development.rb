@@ -21,6 +21,28 @@ vote_types = vote_type_list.map do |type|
   VoteType.create(name: type)
 end
 
+mythoi = [
+  {
+    name: 'Game of Thrones',
+    image_url: 'https://abrilveja.files.wordpress.com/2016/11/tronodeferro.jpg?quality=70&strip=all%201378469&strip=info',
+  },
+  {
+    name: 'Family Guy',
+    image_url: 'https://cdn.newsbusters.org/images/family_guy_0.jpg',
+  },
+  {
+    name: 'Atlanta',
+    image_url: 'https://cdn-images-1.medium.com/max/1600/1*GY9Xu6iv0D-UpFKvS3MLVQ.jpeg',
+  },
+  {
+    name: 'Curb Your Enthusiasm',
+    image_url: 'http://2.bp.blogspot.com/-t92HoyP8bSQ/URo2NqyqbDI/AAAAAAAAACI/Hl12BSRgH9s/s1600/51Q8+oy0jlL._SX500_.jpg',
+  },
+]
+mythoi.map do |mythos|
+  Mythos.find_or_create_by(mythos)
+end
+
 figure_list = [
   #name, category, image, description
   [

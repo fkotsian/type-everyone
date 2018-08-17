@@ -94,6 +94,18 @@
 
 /* MBTI and NEXT BUTTONS */
 
+.buttonColumn {
+  &:hover {
+    .buttonColumnTitle {
+      color: #d9d9d9;
+    }
+  }
+}
+.buttonColumnTitle {
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .mbtiButton {
   display: flex;
   flex: 1;

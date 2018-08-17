@@ -5,6 +5,7 @@ import {Link, Route, withRouter} from 'react-router-dom'
 //import Navbar from 'containers/Navbar'
 import Landing from 'containers/Landing'
 import Game from 'containers/Game'
+import Worlds from 'containers/Worlds'
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends Component {
       <div className="root">
         <Route exact path="/" component={Landing} />
         <Route path="/play" component={Game} />
+        <Route path="/worlds" component={Worlds} />
       </div>
     )
   }

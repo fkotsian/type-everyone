@@ -122,6 +122,7 @@ class Game extends Component {
           {
             Object.keys(MBTI).map(grp => (
               <div
+                className="buttonColumn"
                 style={{
                   width: '25%',
                   display: 'flex',
@@ -132,15 +133,15 @@ class Game extends Component {
                 }}
               >
                 <div
+                  className="buttonColumnTitle"
                   style={{
-                    color: 'white',
                     display: 'flex',
                     justifyContent: 'center',
                     width: '100%',
                     margin: '0 auto',
                   }}
                 >
-                  {grp.toUpperCase()}
+                  {grp}
                 </div>
                 <div
                   style={{
