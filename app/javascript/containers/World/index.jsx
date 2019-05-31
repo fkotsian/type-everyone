@@ -23,7 +23,9 @@ class World extends Component {
       <div
         className="page-world"
       >
-        WORLD
+        <p>WORLD</p>
+        <p>This page will display MOST-VOTED / VOTE-BREAKDOWN for each Figure</p>
+
         {
           this.props.figures.map(f => (
             <div>
