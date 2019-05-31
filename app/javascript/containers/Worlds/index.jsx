@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {
   loadMythoi
 } from '../../actions'
@@ -40,16 +41,20 @@ class Worlds extends Component {
                 key={m.id}
                 className="mythos-container"
               >
-                <p>
-                  {m.name}
-                </p>
-                <div
-                  className="mythos-image"
-                  style={{
-                    backgroundImage: `url(${m.image_url})`,
-                  }}
+                <Link
+                  to={`/worlds/${m.id}`}
                 >
-                </div>
+                  <div
+                    className="mythos-image"
+                    style={{
+                      backgroundImage: `url(${m.image_url})`,
+                    }}
+                  >
+                  </div>
+                  <p>
+                    {m.name}
+                  </p>
+                </Link>
               </div>
             ))
           }

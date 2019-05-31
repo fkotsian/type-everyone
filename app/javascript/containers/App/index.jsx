@@ -6,6 +6,7 @@ import {Link, Route, withRouter} from 'react-router-dom'
 import Landing from 'containers/Landing'
 import Game from 'containers/Game'
 import Worlds from 'containers/Worlds'
+import World from 'containers/World'
 
 class App extends Component {
   constructor(props) {
@@ -16,8 +17,10 @@ class App extends Component {
     return (
       <div className="root">
         <Route exact path="/" component={Landing} />
-        <Route path="/play" component={Game} />
-        <Route path="/worlds" component={Worlds} />
+        <Route path="/play/:worldId" component={Game} />
+        <Route exact path="/play" component={Game} />
+        <Route exact path="/worlds/:worldId" component={World} />
+        <Route exact path="/worlds" component={Worlds} />
       </div>
     )
   }

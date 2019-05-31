@@ -12,11 +12,15 @@ export const loadFiguresSuccess = (figures) => {
     }
   }
 }
-export const loadFigures = () => {
+export const loadFigures = (mythosId=null) => {
   return (dispatch) => {
-    console.log("FETCHING FIGURES!")
-     axios.get(
-       '/api/v1/figures'
+    console.log("FETCHING FIGURES!: ", mythosId)
+      axios.get(
+        mythosId
+        ?
+         `/api/v1/figures/${mythosId}`
+        :
+         `/api/v1/figures`
      ).then(res => {
        console.log("FETCHED FIGURES!")
        console.log(res)

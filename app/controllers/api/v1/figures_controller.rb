@@ -4,9 +4,14 @@ module Api
       respond_to :html, :json
 
       def index
-        @figures = Figure.all
+        if params[:mythos_id]
+          @figures = Figure.where(mythos_id: params[:mythos_id])
+        else
+          @figures = Figure.all
+        end
         Rails.logger.info "LOADING FIGURES"
         Rails.logger.info @figures
+
         respond_with(@figures)
       end
 
@@ -37,9 +42,6 @@ module Api
         end
 
         redirect_to '/play'
-      end
-
-      def show
       end
 
       private
@@ -79,6 +81,7 @@ module Api
         params.require(:figure).permit(
           :name,
           :description,
+          :mythos_id,
           :figure_category => :id
         )
       end

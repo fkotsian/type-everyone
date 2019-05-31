@@ -51,12 +51,18 @@ class Game extends Component {
   }
 
   componentDidMount() {
-    this.props.loadFigures()
+    const worldId = this.props.match.params.worldId
+    this.props.loadFigures(worldId)
     this.initBackgroundCheck()
   }
-  componentWillReceiveProps(props) {
+  componentWillReceiveProps(newProps) {
     console.log("NEW PROPS!")
-    console.log(props)
+    console.log(newProps)
+    const worldId = this.props.match.params.worldId
+    const newWorldId = newProps.match.params.worldId
+    if (newWorldId && newWorldId !== worldId) {
+      this.props.loadFigures(newWorldId)
+    }
   }
   componentDidUpdate(){
     console.log("REFRESHING!")
@@ -183,7 +189,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    loadFigures: () => dispatch(loadFigures()),
+    loadFigures: mythosId => dispatch(loadFigures(mythosId)),
   }
 }
 
