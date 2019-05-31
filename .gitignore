@@ -13,6 +13,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/.DS_Store
 /tmp
 
 /public/packs
