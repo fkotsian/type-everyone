@@ -4,6 +4,14 @@
 	- have buttons styles
 	- have uploader task
 	- transitioned to React!
+
+	NEXT:
+	- Mythos page - cycle of mythos! (a TV-style page of different Mythoi, all in a box, possibly Embiggen when you over (whoo!)
+	- stack a bunch of Mythoi photos - pay a guy to put them in a Google Sheet (then curl, validate size, optimize, and store, woot)
+	  - later store on S3
+	- click button submits vote -> just a simple fading %age ("ENFJ - 11% of people agree with you!", fade out)
+	- navbar of Icons - Home (mythos), Categories (hover list of mythoi), Upload/Suggest/Contribute (raised hand), Flag (red flag)
+	  - poss also Share, Feedback (paper airplane) - later
 	
 	NEED:
 	- uploader (Mythos, figure name or new, desc if applicable, image URL, dropdown of category (default & for now is all 'fiction' at first))
@@ -129,4 +137,7 @@
 	MOBILE
 	- page is better viewable on half screens (currently collapses)
 	
-	
+# Debugging
+
+Requires node 9.* (for node-sass version) -> lol
+- specify in package.json for Heroku (`node-version: ....`)

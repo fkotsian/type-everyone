@@ -27,6 +27,7 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  z-index: 11;
 }
 .figure-name h1 {
   font: 400 72px 'Roboto Condensed';
@@ -102,7 +103,28 @@
 
 /* MBTI and NEXT BUTTONS */
 
+.mbtiButtonRow {
+  z-index: 10;
+  position: absolute;
+  top: 66vh;
+  width: 100%;
+  height: 34vh;
+  padding: 0 0px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .buttonColumn {
+  width: 25%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
   &:hover {
     .buttonColumnTitle {
       color: #d9d9d9;
@@ -112,18 +134,31 @@
 .buttonColumnTitle {
   color: #fff;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mbtiButtonGroup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 12px 0;
 }
 
 .mbtiButton {
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
   border: none;
 
+  flex: 1;
   width: 5em;
   height: 3em;
-  flex: 1;
 
   background-color: #f900c2;
   border-radius: 5px;

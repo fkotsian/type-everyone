@@ -150,53 +150,20 @@ class Game extends Component {
         </div>
 
         <div
-          className="mbti-buttons"
-          style={{
-            'zIndex': 10,
-            'position': 'absolute',
-            'top': '75vh',
-            'width': '100%',
-
-            'display': 'flex',
-            'flexFlow': 'row wrap',
-            'justifyContent': 'center',
-            'alignItems': 'center',
-          }}
+          className="mbtiButtonRow"
         >
           {
             Object.keys(MBTI).map(grp => (
               <div
                 className="buttonColumn"
-                style={{
-                  width: '25%',
-                  display: 'flex',
-                  flexFlow: 'column nowrap',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '0 auto',
-                }}
               >
                 <div
                   className="buttonColumnTitle"
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    width: '100%',
-                    margin: '0 auto',
-                  }}
                 >
                   {grp}
                 </div>
                 <div
-                  style={{
-                    'display': 'flex',
-                    'flexFlow': 'row wrap',
-                    'justifyContent': 'center',
-                    'alignItems': 'center',
-
-                    width: '50%',
-                    margin: '0 auto',
-                  }}
+                  className="mbtiButtonGroup"
                 >
                   {
                     MBTI[grp].map(type => (
