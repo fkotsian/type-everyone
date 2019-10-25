@@ -39,14 +39,12 @@ class Game extends Component {
     super(props)
 
     this.state = {
-      figureIndex: 0,
-      figures: [],
-      currentFigure: {
-        name: 'Mr T',
-        imageUrl: 'https://media.gettyimages.com/photos/mr-t-at-the-19th-annual-academy-of-country-music-awards-knotts-berry-picture-id141323790?s=612x612',
-        showTitle: 'the A team',
-        description: 'Star of the A Team!',
-      },
+      figureIndex: null,
+      currentFigureName: 'Mr T',
+      currentFigureDescription: 'Star of the A Team!',
+      currentFigureImageUrl: 'https://media.gettyimages.com/photos/mr-t-at-the-19th-annual-academy-of-country-music-awards-knotts-berry-picture-id141323790?s=612x612',
+      currentFigureImage: null,
+      showTitle: 'the A team',
     }
   }
 
@@ -54,6 +52,9 @@ class Game extends Component {
     const worldId = this.props.match.params.worldId
     this.props.loadFigures(worldId)
     this.initBackgroundCheck()
+    this.setState({
+      figureIndex: 0,
+    })
   }
   componentWillReceiveProps(newProps) {
     console.log("NEW PROPS!")
@@ -64,9 +65,49 @@ class Game extends Component {
       this.props.loadFigures(newWorldId)
     }
   }
-  componentDidUpdate(){
-    console.log("REFRESHING!")
-    BackgroundCheck.refresh()
+  componentDidUpdate(prevProps, prevState){
+    console.log("COMPONENT UPDATE")
+    console.log(this.props)
+    console.log(this.state)
+    // figure changed or new figures
+    if (
+      prevState.figureIndex !== this.state.figureIndex ||
+      prevProps.figures !== this.props.figures
+    ) {
+      let currentFigure = {...this.props.figures[this.state.figureIndex]}
+      this.setState({
+        currentFigureName: currentFigure.name,
+        currentFigureDescription: currentFigure.description,
+        currentFigureImageUrl: currentFigure.image,
+        // wtf is showTitle
+      })
+    }
+
+    // imageUrl has changed
+    if (prevState.currentFigureImageUrl !== this.state.currentFigureImageUrl) {
+      Promise.resolve()
+        .then(() => {
+          if (/https?:\/\//.test(this.state.currentFigureImageUrl)) {
+            return this.state.currentFigureImageUrl
+          }
+          else {
+            // returns the imported img
+            return import(`images/${this.state.currentFigureImageUrl}`)
+          }
+        })
+        .then(img => {
+          // set the img to background
+          this.setState({
+            currentFigureImage: img
+          })
+        })
+    }
+
+    // image itself has changed
+    if (prevState.currentFigureImage !== this.state.currentFigureImage) {
+      // check for new image BG color
+      BackgroundCheck.refresh()
+    }
   }
 
   initBackgroundCheck() {
@@ -78,15 +119,12 @@ class Game extends Component {
 
   render() {
     console.log("GAME!")
-    let figure = this.props.figures[this.state.figureIndex] || {}
-    console.log(figure)
-    console.log("STYLES")
-    console.log(styles)
+    console.log(this.state.currentFigureName)
 
     return (
       <div className="game"
         style={{
-          'backgroundImage': `url(${figure.image})`,
+          'backgroundImage': `url(${this.state.currentFigureImage})`,
           'backgroundSize': 'cover',
           'backgroundRepeat': 'no-repeat',
           'backgroundPosition': 'center',
@@ -100,12 +138,12 @@ class Game extends Component {
           <div className="figure">
             <div className="figure-name">
               <h1>
-                { figure.name }
+                { this.state.currentFigureName }
               </h1>
             </div>
             <div className="figure-description">
               <h1>
-                { figure.description }
+                { this.state.currentFigureDescription }
               </h1>
             </div>
           </div>

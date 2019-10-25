@@ -14,6 +14,9 @@
 	
 	FUTURE:
 	- guess by attr (E/N/F/P, or by function (choose functions, then order them) -> choose N, Ni or Ne? -> choose 4, gives you 4 types, choose 1, shows feedback
+		- can toggle between modes
+	- hide navbar in favor of buttons in upper-R of game (Home: house, Category: wizard, Contribute: hand/paperAirplane, Flag: feedback)
+		- Share?: heart, Feedback: (red) flag, -> flag this, give feedback
 	- submit more photos button
 	- real people mythos ('US Politics' mythos, for example)
 	- display clickable Mythoses (Home screen shows 4 random mythos, eventually shows 'Real' vs 'Fiction')

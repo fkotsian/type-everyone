@@ -21,7 +21,7 @@
   position: relative;
   top: 40px;
   background-color: rgba(200,200,200,.5);
-  padding: 2rem;
+  padding: 24px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -29,16 +29,24 @@
   text-transform: uppercase;
 }
 .figure-name h1 {
-  font: 400 88px 'Roboto Condensed';
+  font: 400 72px 'Roboto Condensed';
   color: #fff;
+  padding-top: 0;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 .figure-description {
-  font: 100 24px 'Roboto';
+  font: 100 16px 'Roboto';
   color: rgb(242,242,242);
-  letter-spacing: .43em;
+  letter-spacing: .1em;
 
   margin-top: 0;
-  padding-bottom: 0.65em;
+  padding-bottom: 0;
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .play-buttons-holder {
