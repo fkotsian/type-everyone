@@ -1,5 +1,14 @@
 #TypeEverything
 
+###
+
+Next:
+- random mythoi on land
+- takes you to instances of members + showing their type
+- + play button to type them, maybe click or hover on one to vote
+
+- check out https://www.personality-database.com/category/7/Cartoons/mbti-personality-type
+
 	PROGRESS:
 	- have buttons styles
 	- have uploader task
