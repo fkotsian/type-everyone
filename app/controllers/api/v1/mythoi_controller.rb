@@ -8,6 +8,14 @@ module Api
         respond_with @mythoi
       end
 
+      def categories
+        render :ok, Mythoi.categories
+      end
+
+      def random
+        render :ok, Mythoi.limit(5).order("RANDOM()")  # "RAND()" for mysql
+      end
+
       def show
         @mythos = Mythos.find_by(id: params[:id])
         respond_with @mythos
